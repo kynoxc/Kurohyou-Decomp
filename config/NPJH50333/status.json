@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "target": "NPJH50333",
+  "retail_sha256": "f82d09615506fd0aaa4a792844f0fb6908b0c07e5bb4fea1c992d4c7827f1975",
+  "compiler": "SN Systems pspsnc 1.2.7503.0",
+  "audited_functions": 30,
+  "matching_exact": 27,
+  "nonmatching": 3,
+  "tracked_function_bytes": 2536,
+  "matched_code_bytes": 1992,
+  "total_executable_bytes": 6040516,
+  "strict_code_percent": 0.03297731518300754,
+  "total_allocated_nonexec_bytes": 1092989,
+  "matched_data_bytes": 0,
+  "decomp_dev_visibility_threshold_percent": 0.5,
+  "bytes_required_for_visibility": 30203,
+  "additional_exact_bytes_required": 28211,
+  "remaining_functions": [
+    {
+      "address": "0x001937A4",
+      "name": "RetailAngleScalarSetTarget",
+      "size": "0x124",
+      "best": {
+        "size": "292/292",
+        "equal_words": "48/73",
+        "word_similarity": 65.7534246575,
+        "differences": 25,
+        "exact_prefix_words": 16
+      }
+    },
+    {
+      "address": "0x001E2810",
+      "name": "CPlayerController_ActorPredicate",
+      "size": "0x48",
+      "best": {
+        "size": "72/72",
+        "equal_words": "17/18",
+        "word_similarity": 94.4444444444,
+        "differences": 1
+      }
+    },
+    {
+      "address": "0x003748EC",
+      "name": "SceneTitleMainmenu_BindRows",
+      "size": "0xB4",
+      "best": {
+        "size": "180/180",
+        "equal_words": "38/45",
+        "word_similarity": 84.4444444444,
+        "differences": 7,
+        "body_exact_from_offset": "0x3C"
+      }
+    }
+  ]
+}

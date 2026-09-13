@@ -1,0 +1,88 @@
+# Conservative split seed generated from the verified NPJH50333 ELF.
+# Original section names are stripped; generic names are deliberate.
+# This file does not invent translation-unit boundaries.
+name: "Kurohyou: Ryu ga Gotoku Shinsho (NPJH50333)"
+sha1: b08382cc978be165c6e23a00bca88b8b8ce3a13a
+
+options:
+  platform: psp
+  compiler: GCC  # Splat macro/disassembly mode only; retail matching uses SNC.
+  endianness: little
+  basename: NPJH50333_EBOOT
+  base_path: .
+  target_path: orig/NPJH50333_EBOOT.BIN
+  elf_path: orig/NPJH50333_EBOOT.BIN
+  asm_path: asm
+  data_path: data
+  src_path: matching/src
+  build_path: build/splat
+  asset_path: build/splat/assets
+  generated_asm_macros_directory: build/splat/include
+  cache_path: build/splat/.splache
+  ld_script_path: build/splat/NPJH50333.ld
+  create_c_files: False
+  subalign: null
+  find_file_boundaries: False
+  migrate_rodata_to_functions: False
+
+segments:
+  - [0x0, bin, elf_header]
+  - name: load0
+    type: code
+    start: 0xC0
+    vram: 0x00000000
+    subsegments:
+      - [0xC0, asm, section_01]
+      - [0x5C24D4, asm, section_03]
+      - [0x5C253C, asm, section_04]
+      - [0x5C2614, asm, section_05]
+      - [0x5C2674, asm, section_06]
+      - [0x5C26B4, asm, section_07]
+      - [0x5C26D4, asm, section_08]
+      - [0x5C26EC, asm, section_09]
+      - [0x5C274C, asm, section_10]
+      - [0x5C279C, asm, section_11]
+      - [0x5C27CC, asm, section_12]
+      - [0x5C27EC, asm, section_13]
+      - [0x5C27FC, asm, section_14]
+      - [0x5C2804, asm, section_15]
+      - [0x5C282C, asm, section_16]
+      - [0x5C289C, asm, section_17]
+      - [0x5C28B4, asm, section_18]
+      - [0x5C28BC, asm, section_19]
+      - [0x5C2914, asm, section_20]
+      - [0x5C294C, asm, section_21]
+      - [0x5C296C, asm, section_22]
+      - [0x5C29AC, asm, section_23]
+      - [0x5C2B04, asm, section_24]
+      - [0x5C2B5C, asm, section_25]
+      - [0x5C2B74, asm, section_26]
+      - [0x5C2B9C, asm, section_27]
+      - [0x5C2BAC, asm, section_28]
+      - [0x5C2BE4, asm, section_29]
+      - [0x5C2C84, data, section_30]
+      - [0x5C2C88, rodata, section_31]
+      - [0x5C2C98, data, section_33]
+      - [0x5C2C9C, data, section_34]
+      - [0x5C2CA0, rodata, section_35]
+      - [0x5C2EBC, data, section_37]
+      - [0x5C2EC0, data, section_38]
+      - [0x5C2EF4, rodata, section_40]
+      - [0x5C3114, rodata, section_42]
+      - [0x5C3500, rodata, section_43]
+      - [0x62A0C0, data, section_45]
+      - [0x68D338, data, section_47]
+      - [0x68D428, rodata, section_49]
+      - [0x68D430, rodata, section_50]
+
+  - name: load1
+    type: code
+    start: 0x68D440
+    vram: 0x0068D378
+    bss_size: 0x34300
+    subsegments:
+      - [0x68D440, data, section_51]
+      - [0x68F3A0, data, section_53]
+      - { start: 0x699748, type: bss, vram: 0x00699680, name: section_55_bss }
+
+  - [0x699748]

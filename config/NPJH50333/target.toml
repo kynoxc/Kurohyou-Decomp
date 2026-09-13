@@ -1,0 +1,16 @@
+schema = 1
+id = "NPJH50333"
+name = "Kurohyou: Ryu ga Gotoku Shinsho"
+platform = "psp"
+architecture = "MIPS-II"
+abi = "EABI32"
+
+retail_path = "orig/NPJH50333_EBOOT.BIN"
+file_size = 9747152
+sha1 = "b08382cc978be165c6e23a00bca88b8b8ce3a13a"
+sha256 = "f82d09615506fd0aaa4a792844f0fb6908b0c07e5bb4fea1c992d4c7827f1975"
+entrypoint = 0x00389E7C
+elf_flags = 0x10A23001
+
+compiler = "SN Systems pspsnc 1.2.7503.0"
+matching_policy = "byte-exact relocated machine code"

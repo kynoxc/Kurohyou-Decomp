@@ -1,0 +1,2082 @@
+{
+  "schema": 1,
+  "method": "MIPS absolute address construction: LUI + ADDIU/ORI within four instructions",
+  "warning": "Source path anchors are evidence of source ownership, not exact TU boundary proof.",
+  "count": 59,
+  "anchors": [
+    {
+      "path": "../game/scene/battle/attack_hit_chk_b.cpp",
+      "string_vaddr": 6089656,
+      "string_file_offset": 6089848,
+      "xref_count": 2,
+      "xref_min": 487080,
+      "xref_max": 490328,
+      "xrefs": [
+        {
+          "lui": 487080,
+          "low": 487096,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 490328,
+          "low": 490344,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/camera_b.cpp",
+      "string_vaddr": 6091832,
+      "string_file_offset": 6092024,
+      "xref_count": 2,
+      "xref_min": 534392,
+      "xref_max": 535036,
+      "xrefs": [
+        {
+          "lui": 534392,
+          "low": 534408,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 535036,
+          "low": 535052,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/effect_b.cpp",
+      "string_vaddr": 6108904,
+      "string_file_offset": 6109096,
+      "xref_count": 2,
+      "xref_min": 668208,
+      "xref_max": 669304,
+      "xrefs": [
+        {
+          "lui": 668208,
+          "low": 668224,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 669304,
+          "low": 669320,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/endless_battle_ctrl_b.cpp",
+      "string_vaddr": 6109160,
+      "string_file_offset": 6109352,
+      "xref_count": 2,
+      "xref_min": 698316,
+      "xref_max": 698560,
+      "xrefs": [
+        {
+          "lui": 698316,
+          "low": 698332,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 698560,
+          "low": 698576,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/fighter_ctrl_b.cpp",
+      "string_vaddr": 6110020,
+      "string_file_offset": 6110212,
+      "xref_count": 1,
+      "xref_min": 711120,
+      "xref_max": 711120,
+      "xrefs": [
+        {
+          "lui": 711120,
+          "low": 711136,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/heat_act_b.cpp",
+      "string_vaddr": 6112368,
+      "string_file_offset": 6112560,
+      "xref_count": 1,
+      "xref_min": 727800,
+      "xref_max": 727800,
+      "xrefs": [
+        {
+          "lui": 727800,
+          "low": 727816,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/heat_info_b.cpp",
+      "string_vaddr": 6112604,
+      "string_file_offset": 6112796,
+      "xref_count": 1,
+      "xref_min": 735496,
+      "xref_max": 735496,
+      "xrefs": [
+        {
+          "lui": 735496,
+          "low": 735512,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/hurt_b.cpp",
+      "string_vaddr": 6113180,
+      "string_file_offset": 6113372,
+      "xref_count": 4,
+      "xref_min": 749252,
+      "xref_max": 750196,
+      "xrefs": [
+        {
+          "lui": 749252,
+          "low": 749268,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 749844,
+          "low": 749860,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 750000,
+          "low": 750016,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 750196,
+          "low": 750212,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/k1_b.cpp",
+      "string_vaddr": 6115664,
+      "string_file_offset": 6115856,
+      "xref_count": 1,
+      "xref_min": 775692,
+      "xref_max": 775692,
+      "xrefs": [
+        {
+          "lui": 775692,
+          "low": 775708,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/manager_b.cpp",
+      "string_vaddr": 6117272,
+      "string_file_offset": 6117464,
+      "xref_count": 3,
+      "xref_min": 791356,
+      "xref_max": 794036,
+      "xrefs": [
+        {
+          "lui": 791356,
+          "low": 791372,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 792096,
+          "low": 792112,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 794036,
+          "low": 794044,
+          "gap_instructions": 2,
+          "register": 7,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/motion_b.cpp",
+      "string_vaddr": 6120104,
+      "string_file_offset": 6120296,
+      "xref_count": 2,
+      "xref_min": 826072,
+      "xref_max": 831944,
+      "xrefs": [
+        {
+          "lui": 826072,
+          "low": 826088,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 831944,
+          "low": 831960,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/ouch_b.cpp",
+      "string_vaddr": 6121540,
+      "string_file_offset": 6121732,
+      "xref_count": 1,
+      "xref_min": 841852,
+      "xref_max": 841852,
+      "xrefs": [
+        {
+          "lui": 841852,
+          "low": 841868,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/param_b.cpp",
+      "string_vaddr": 6122852,
+      "string_file_offset": 6123044,
+      "xref_count": 1,
+      "xref_min": 861208,
+      "xref_max": 861208,
+      "xrefs": [
+        {
+          "lui": 861208,
+          "low": 861224,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/play_ctrl_b.cpp",
+      "string_vaddr": 6122972,
+      "string_file_offset": 6123164,
+      "xref_count": 6,
+      "xref_min": 864404,
+      "xref_max": 866156,
+      "xrefs": [
+        {
+          "lui": 864404,
+          "low": 864420,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 864628,
+          "low": 864644,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 864888,
+          "low": 864904,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 865620,
+          "low": 865636,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 865912,
+          "low": 865928,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 866156,
+          "low": 866172,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/result_b.cpp",
+      "string_vaddr": 6123748,
+      "string_file_offset": 6123940,
+      "xref_count": 4,
+      "xref_min": 881728,
+      "xref_max": 887400,
+      "xrefs": [
+        {
+          "lui": 881728,
+          "low": 881744,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 885248,
+          "low": 885264,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 886592,
+          "low": 886608,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 887400,
+          "low": 887416,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/sound_b.cpp",
+      "string_vaddr": 6128668,
+      "string_file_offset": 6128860,
+      "xref_count": 1,
+      "xref_min": 907360,
+      "xref_max": 907360,
+      "xrefs": [
+        {
+          "lui": 907360,
+          "low": 907368,
+          "gap_instructions": 2,
+          "register": 6,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/style_flow_b.cpp",
+      "string_vaddr": 6130608,
+      "string_file_offset": 6130800,
+      "xref_count": 1,
+      "xref_min": 926844,
+      "xref_max": 926844,
+      "xrefs": [
+        {
+          "lui": 926844,
+          "low": 926860,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/weapon_b.cpp",
+      "string_vaddr": 6136764,
+      "string_file_offset": 6136956,
+      "xref_count": 2,
+      "xref_min": 972348,
+      "xref_max": 976512,
+      "xrefs": [
+        {
+          "lui": 972348,
+          "low": 972364,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 976512,
+          "low": 976528,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/battle/weapon_ctrl_b.cpp",
+      "string_vaddr": 6137556,
+      "string_file_offset": 6137748,
+      "xref_count": 2,
+      "xref_min": 981764,
+      "xref_max": 983480,
+      "xrefs": [
+        {
+          "lui": 981764,
+          "low": 981768,
+          "gap_instructions": 1,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 983480,
+          "low": 983488,
+          "gap_instructions": 2,
+          "register": 10,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/cabaclu/cabaclu_sequence_camera.cpp",
+      "string_vaddr": 6146012,
+      "string_file_offset": 6146204,
+      "xref_count": 13,
+      "xref_min": 1070200,
+      "xref_max": 1072208,
+      "xrefs": [
+        {
+          "lui": 1070200,
+          "low": 1070216,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1070256,
+          "low": 1070272,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1070320,
+          "low": 1070336,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1071700,
+          "low": 1071716,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1071756,
+          "low": 1071772,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1071812,
+          "low": 1071828,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1071868,
+          "low": 1071884,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1071924,
+          "low": 1071940,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1071980,
+          "low": 1071996,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1072036,
+          "low": 1072052,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1072092,
+          "low": 1072108,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1072148,
+          "low": 1072164,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1072208,
+          "low": 1072224,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/cabaclu/cabaclu_sequence_character.cpp",
+      "string_vaddr": 6146760,
+      "string_file_offset": 6146952,
+      "xref_count": 15,
+      "xref_min": 1077300,
+      "xref_max": 1086768,
+      "xrefs": [
+        {
+          "lui": 1077300,
+          "low": 1077316,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1077356,
+          "low": 1077372,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1078040,
+          "low": 1078056,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1078100,
+          "low": 1078116,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1078956,
+          "low": 1078972,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1079012,
+          "low": 1079028,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1079668,
+          "low": 1079684,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1079724,
+          "low": 1079740,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1079780,
+          "low": 1079796,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1079836,
+          "low": 1079852,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1079892,
+          "low": 1079908,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1079952,
+          "low": 1079968,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1086652,
+          "low": 1086668,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1086708,
+          "low": 1086724,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1086768,
+          "low": 1086784,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/cabaclu/cabaclu_sequence_light.cpp",
+      "string_vaddr": 6146992,
+      "string_file_offset": 6147184,
+      "xref_count": 13,
+      "xref_min": 1088648,
+      "xref_max": 1089288,
+      "xrefs": [
+        {
+          "lui": 1088648,
+          "low": 1088664,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1088704,
+          "low": 1088720,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1088756,
+          "low": 1088772,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1088812,
+          "low": 1088828,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1088868,
+          "low": 1088884,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1088920,
+          "low": 1088936,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1088972,
+          "low": 1088988,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1089024,
+          "low": 1089040,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1089076,
+          "low": 1089092,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1089128,
+          "low": 1089144,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1089180,
+          "low": 1089196,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1089232,
+          "low": 1089248,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1089288,
+          "low": 1089304,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/cabaclu/state/cabaclu_statemanager.cpp",
+      "string_vaddr": 6154292,
+      "string_file_offset": 6154484,
+      "xref_count": 4,
+      "xref_min": 1139740,
+      "xref_max": 1140508,
+      "xrefs": [
+        {
+          "lui": 1139740,
+          "low": 1139756,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1139800,
+          "low": 1139816,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1140448,
+          "low": 1140464,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1140508,
+          "low": 1140524,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/cabaclu/event/cabaclu_eventmanager.cpp",
+      "string_vaddr": 6161756,
+      "string_file_offset": 6161948,
+      "xref_count": 2,
+      "xref_min": 1170684,
+      "xref_max": 1170744,
+      "xrefs": [
+        {
+          "lui": 1170684,
+          "low": 1170700,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1170744,
+          "low": 1170760,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequence_globalscity.cpp",
+      "string_vaddr": 6199160,
+      "string_file_offset": 6199352,
+      "xref_count": 3,
+      "xref_min": 1731108,
+      "xref_max": 1731224,
+      "xrefs": [
+        {
+          "lui": 1731108,
+          "low": 1731124,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1731164,
+          "low": 1731180,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1731224,
+          "low": 1731240,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequence_mail.cpp",
+      "string_vaddr": 6199388,
+      "string_file_offset": 6199580,
+      "xref_count": 2,
+      "xref_min": 1732484,
+      "xref_max": 1732548,
+      "xrefs": [
+        {
+          "lui": 1732484,
+          "low": 1732500,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1732548,
+          "low": 1732564,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequencebgm.cpp",
+      "string_vaddr": 6199572,
+      "string_file_offset": 6199764,
+      "xref_count": 2,
+      "xref_min": 1733780,
+      "xref_max": 1733840,
+      "xrefs": [
+        {
+          "lui": 1733780,
+          "low": 1733796,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1733840,
+          "low": 1733856,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequencecharmanager.cpp",
+      "string_vaddr": 6200976,
+      "string_file_offset": 6201168,
+      "xref_count": 2,
+      "xref_min": 1736936,
+      "xref_max": 1736996,
+      "xrefs": [
+        {
+          "lui": 1736936,
+          "low": 1736952,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1736996,
+          "low": 1737012,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequencecharmove.cpp",
+      "string_vaddr": 6201372,
+      "string_file_offset": 6201564,
+      "xref_count": 10,
+      "xref_min": 1741712,
+      "xref_max": 1742216,
+      "xrefs": [
+        {
+          "lui": 1741712,
+          "low": 1741728,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1741768,
+          "low": 1741784,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1741828,
+          "low": 1741844,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1741888,
+          "low": 1741904,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1741940,
+          "low": 1741956,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1741992,
+          "low": 1742008,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1742048,
+          "low": 1742064,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1742104,
+          "low": 1742120,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1742160,
+          "low": 1742176,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1742216,
+          "low": 1742232,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequencefugitive.cpp",
+      "string_vaddr": 6203412,
+      "string_file_offset": 6203604,
+      "xref_count": 4,
+      "xref_min": 1750624,
+      "xref_max": 1751512,
+      "xrefs": [
+        {
+          "lui": 1750624,
+          "low": 1750640,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1750684,
+          "low": 1750700,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1751452,
+          "low": 1751468,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1751512,
+          "low": 1751528,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequencefuncswitch.cpp",
+      "string_vaddr": 6203696,
+      "string_file_offset": 6203888,
+      "xref_count": 3,
+      "xref_min": 1753808,
+      "xref_max": 1753920,
+      "xrefs": [
+        {
+          "lui": 1753808,
+          "low": 1753824,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1753864,
+          "low": 1753880,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1753920,
+          "low": 1753936,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequencemotion.cpp",
+      "string_vaddr": 6203916,
+      "string_file_offset": 6204108,
+      "xref_count": 7,
+      "xref_min": 1756532,
+      "xref_max": 1758496,
+      "xrefs": [
+        {
+          "lui": 1756532,
+          "low": 1756548,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1756592,
+          "low": 1756608,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1757352,
+          "low": 1757368,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1757416,
+          "low": 1757432,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1758380,
+          "low": 1758396,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1758436,
+          "low": 1758452,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1758496,
+          "low": 1758512,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequencemoveplace.cpp",
+      "string_vaddr": 6204308,
+      "string_file_offset": 6204500,
+      "xref_count": 4,
+      "xref_min": 1759816,
+      "xref_max": 1760536,
+      "xrefs": [
+        {
+          "lui": 1759816,
+          "low": 1759832,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1759876,
+          "low": 1759892,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1760480,
+          "low": 1760496,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1760536,
+          "low": 1760552,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequenceplayer.cpp",
+      "string_vaddr": 6204852,
+      "string_file_offset": 6205044,
+      "xref_count": 2,
+      "xref_min": 1764352,
+      "xref_max": 1764412,
+      "xrefs": [
+        {
+          "lui": 1764352,
+          "low": 1764368,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1764412,
+          "low": 1764428,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequenceshop.cpp",
+      "string_vaddr": 6206204,
+      "string_file_offset": 6206396,
+      "xref_count": 2,
+      "xref_min": 1766304,
+      "xref_max": 1766360,
+      "xrefs": [
+        {
+          "lui": 1766304,
+          "low": 1766320,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1766360,
+          "low": 1766376,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/scene_city_sequencetalk.cpp",
+      "string_vaddr": 6207400,
+      "string_file_offset": 6207592,
+      "xref_count": 4,
+      "xref_min": 1771212,
+      "xref_max": 1771860,
+      "xrefs": [
+        {
+          "lui": 1771212,
+          "low": 1771228,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1771268,
+          "low": 1771284,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1771804,
+          "low": 1771820,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 1771860,
+          "low": 1771876,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/cse/scene_city_cse.cpp",
+      "string_vaddr": 6249192,
+      "string_file_offset": 6249384,
+      "xref_count": 1,
+      "xref_min": 2201124,
+      "xref_max": 2201124,
+      "xrefs": [
+        {
+          "lui": 2201124,
+          "low": 2201136,
+          "gap_instructions": 3,
+          "register": 17,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/scene/city/casino_menu/casino_menu_sub_list.cpp",
+      "string_vaddr": 6255172,
+      "string_file_offset": 6255364,
+      "xref_count": 1,
+      "xref_min": 2233656,
+      "xref_max": 2233656,
+      "xrefs": [
+        {
+          "lui": 2233656,
+          "low": 2233672,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/globals/gameglobals.cpp",
+      "string_vaddr": 6273140,
+      "string_file_offset": 6273332,
+      "xref_count": 2,
+      "xref_min": 2364916,
+      "xref_max": 2366004,
+      "xrefs": [
+        {
+          "lui": 2364916,
+          "low": 2364932,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 2366004,
+          "low": 2366020,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/globals/gameglobals_cabaclu.cpp",
+      "string_vaddr": 6275216,
+      "string_file_offset": 6275408,
+      "xref_count": 1,
+      "xref_min": 2374428,
+      "xref_max": 2374428,
+      "xrefs": [
+        {
+          "lui": 2374428,
+          "low": 2374444,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/globals/gameglobals_flags.cpp",
+      "string_vaddr": 6277356,
+      "string_file_offset": 6277548,
+      "xref_count": 1,
+      "xref_min": 2386632,
+      "xref_max": 2386632,
+      "xrefs": [
+        {
+          "lui": 2386632,
+          "low": 2386648,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/globals/parameter/flagmanager.cpp",
+      "string_vaddr": 6281368,
+      "string_file_offset": 6281560,
+      "xref_count": 1,
+      "xref_min": 2430856,
+      "xref_max": 2430856,
+      "xrefs": [
+        {
+          "lui": 2430856,
+          "low": 2430872,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/globals/savedata/savedatamanager.cpp",
+      "string_vaddr": 6284364,
+      "string_file_offset": 6284556,
+      "xref_count": 2,
+      "xref_min": 2459960,
+      "xref_max": 2460052,
+      "xrefs": [
+        {
+          "lui": 2459960,
+          "low": 2459976,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 2460052,
+          "low": 2460068,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/globals/item/gameitem_box.cpp",
+      "string_vaddr": 6301792,
+      "string_file_offset": 6301984,
+      "xref_count": 1,
+      "xref_min": 2704852,
+      "xref_max": 2704852,
+      "xrefs": [
+        {
+          "lui": 2704852,
+          "low": 2704868,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/util/xml/xml_buffer.cpp",
+      "string_vaddr": 6321732,
+      "string_file_offset": 6321924,
+      "xref_count": 1,
+      "xref_min": 3091680,
+      "xref_max": 3091680,
+      "xrefs": [
+        {
+          "lui": 3091680,
+          "low": 3091696,
+          "gap_instructions": 4,
+          "register": 6,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/kseq_message.cpp",
+      "string_vaddr": 6339240,
+      "string_file_offset": 6339432,
+      "xref_count": 2,
+      "xref_min": 3242168,
+      "xref_max": 3242224,
+      "xrefs": [
+        {
+          "lui": 3242168,
+          "low": 3242184,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3242224,
+          "low": 3242240,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_cse.cpp",
+      "string_vaddr": 6341916,
+      "string_file_offset": 6342108,
+      "xref_count": 4,
+      "xref_min": 3263796,
+      "xref_max": 3264672,
+      "xrefs": [
+        {
+          "lui": 3263796,
+          "low": 3263812,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3263856,
+          "low": 3263872,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3264612,
+          "low": 3264628,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3264672,
+          "low": 3264688,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_expup.cpp",
+      "string_vaddr": 6342168,
+      "string_file_offset": 6342360,
+      "xref_count": 3,
+      "xref_min": 3268524,
+      "xref_max": 3268632,
+      "xrefs": [
+        {
+          "lui": 3268524,
+          "low": 3268540,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3268580,
+          "low": 3268596,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3268632,
+          "low": 3268648,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_filter_fade.cpp",
+      "string_vaddr": 6342468,
+      "string_file_offset": 6342660,
+      "xref_count": 4,
+      "xref_min": 3272568,
+      "xref_max": 3272736,
+      "xrefs": [
+        {
+          "lui": 3272568,
+          "low": 3272584,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3272624,
+          "low": 3272640,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3272680,
+          "low": 3272696,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3272736,
+          "low": 3272752,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_globalsdata.cpp",
+      "string_vaddr": 6342728,
+      "string_file_offset": 6342920,
+      "xref_count": 22,
+      "xref_min": 3274112,
+      "xref_max": 3281712,
+      "xrefs": [
+        {
+          "lui": 3274112,
+          "low": 3274128,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3274168,
+          "low": 3274184,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3274228,
+          "low": 3274244,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3274848,
+          "low": 3274864,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3274912,
+          "low": 3274928,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3275584,
+          "low": 3275600,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3275648,
+          "low": 3275664,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3276352,
+          "low": 3276368,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3276408,
+          "low": 3276424,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3277152,
+          "low": 3277168,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3277208,
+          "low": 3277224,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3277932,
+          "low": 3277948,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3277988,
+          "low": 3278004,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3278732,
+          "low": 3278748,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3278788,
+          "low": 3278804,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3279600,
+          "low": 3279616,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3279656,
+          "low": 3279672,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3279716,
+          "low": 3279732,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3280832,
+          "low": 3280848,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3280892,
+          "low": 3280908,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3281652,
+          "low": 3281668,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3281712,
+          "low": 3281728,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_if.cpp",
+      "string_vaddr": 6343360,
+      "string_file_offset": 6343552,
+      "xref_count": 5,
+      "xref_min": 3286200,
+      "xref_max": 3286424,
+      "xrefs": [
+        {
+          "lui": 3286200,
+          "low": 3286216,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3286256,
+          "low": 3286272,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3286312,
+          "low": 3286328,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3286368,
+          "low": 3286384,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3286424,
+          "low": 3286440,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_item.cpp",
+      "string_vaddr": 6343964,
+      "string_file_offset": 6344156,
+      "xref_count": 4,
+      "xref_min": 3289288,
+      "xref_max": 3291080,
+      "xrefs": [
+        {
+          "lui": 3289288,
+          "low": 3289304,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3289344,
+          "low": 3289360,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3291020,
+          "low": 3291036,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3291080,
+          "low": 3291096,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_lookahead.cpp",
+      "string_vaddr": 6344116,
+      "string_file_offset": 6344308,
+      "xref_count": 5,
+      "xref_min": 3292604,
+      "xref_max": 3292824,
+      "xrefs": [
+        {
+          "lui": 3292604,
+          "low": 3292620,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3292660,
+          "low": 3292676,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3292720,
+          "low": 3292736,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3292772,
+          "low": 3292788,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3292824,
+          "low": 3292840,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_mail.cpp",
+      "string_vaddr": 6344560,
+      "string_file_offset": 6344752,
+      "xref_count": 2,
+      "xref_min": 3294808,
+      "xref_max": 3294872,
+      "xrefs": [
+        {
+          "lui": 3294808,
+          "low": 3294824,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3294872,
+          "low": 3294888,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_pausemenu.cpp",
+      "string_vaddr": 6344808,
+      "string_file_offset": 6345000,
+      "xref_count": 2,
+      "xref_min": 3295884,
+      "xref_max": 3295940,
+      "xrefs": [
+        {
+          "lui": 3295884,
+          "low": 3295900,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3295940,
+          "low": 3295956,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_sound.cpp",
+      "string_vaddr": 6346012,
+      "string_file_offset": 6346204,
+      "xref_count": 11,
+      "xref_min": 3299744,
+      "xref_max": 3301492,
+      "xrefs": [
+        {
+          "lui": 3299744,
+          "low": 3299760,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3299800,
+          "low": 3299816,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3299864,
+          "low": 3299880,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3300496,
+          "low": 3300512,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3300552,
+          "low": 3300568,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3300616,
+          "low": 3300632,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3301256,
+          "low": 3301272,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3301316,
+          "low": 3301332,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3301376,
+          "low": 3301392,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3301432,
+          "low": 3301448,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3301492,
+          "low": 3301508,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_story.cpp",
+      "string_vaddr": 6346196,
+      "string_file_offset": 6346388,
+      "xref_count": 2,
+      "xref_min": 3303176,
+      "xref_max": 3303232,
+      "xrefs": [
+        {
+          "lui": 3303176,
+          "low": 3303192,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3303232,
+          "low": 3303248,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_style.cpp",
+      "string_vaddr": 6346476,
+      "string_file_offset": 6346668,
+      "xref_count": 2,
+      "xref_min": 3304400,
+      "xref_max": 3304456,
+      "xrefs": [
+        {
+          "lui": 3304400,
+          "low": 3304416,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3304456,
+          "low": 3304472,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    },
+    {
+      "path": "../game/sequence/common_userdata/sequence_common_wait.cpp",
+      "string_vaddr": 6346660,
+      "string_file_offset": 6346852,
+      "xref_count": 2,
+      "xref_min": 3306260,
+      "xref_max": 3306316,
+      "xrefs": [
+        {
+          "lui": 3306260,
+          "low": 3306276,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        },
+        {
+          "lui": 3306316,
+          "low": 3306332,
+          "gap_instructions": 4,
+          "register": 5,
+          "low_op": "addiu"
+        }
+      ]
+    }
+  ]
+}

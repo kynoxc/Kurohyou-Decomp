@@ -1,0 +1,146 @@
+{
+  "toolchains": {
+    "clang17_psp_o32_probe": {
+      "kind": "diagnostic_only",
+      "compiler": "clang",
+      "flags": [
+        "--target=mipsel-sony-psp",
+        "-mips2",
+        "-mabi=o32",
+        "-G0",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fomit-frame-pointer",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-O2"
+      ],
+      "description": "Available host probe only. PSP retail ELF is EABI32; this O32 backend is intentionally NOT accepted for certification."
+    },
+    "pspdev_gcc_eabi_probe": {
+      "kind": "diagnostic_only",
+      "compiler": "psp-gcc",
+      "flags": [
+        "-mabi=eabi",
+        "-mips2",
+        "-G0",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fomit-frame-pointer",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-O2"
+      ],
+      "description": "Open-source PSPDEV GCC EABI probe. Use for compiler fingerprinting only until its version/codegen is proven compatible with the retail game."
+    },
+    "gcc303_eabi_probe": {
+      "kind": "diagnostic_only",
+      "compiler": "mipsel-elf-gcc-3.0.3",
+      "flags": [
+        "-mabi=eabi",
+        "-mips2",
+        "-G0",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fomit-frame-pointer",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-O2"
+      ],
+      "description": "Template for an FSF GCC 3.0.3 MIPS EABI cross compiler. Name/path is intentionally not bundled; CRI strings make this version worth testing, but they do not prove the game code used it."
+    },
+    "pspdev_gcc432_eabi_probe": {
+      "kind": "diagnostic_only",
+      "compiler": "psp-gcc",
+      "flags": [
+        "-G0",
+        "-fno-pic",
+        "-mno-abicalls",
+        "-fomit-frame-pointer",
+        "-ffreestanding",
+        "-fno-builtin",
+        "-fno-stack-protector",
+        "-O2"
+      ],
+      "expected_version_regex": "\\b4\\.3\\.2\\b",
+      "description": "Historical open-source PSPDEV GCC 4.3.2 candidate. The PSP target patch defaults to Allegrex, ISA II and EABI; still diagnostic until exact retail fingerprints are reproduced."
+    },
+    "snc_1_2_7503_o2_sched2": {
+      "kind": "fingerprint_candidate",
+      "compiler": "matching/compilers/pspsnc_1.2.7503.0/pspsnc.exe",
+      "launcher_windows": [],
+      "launcher_posix": [
+        "wibo"
+      ],
+      "flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2"
+      ],
+      "description": "SN Systems/Sony PSP SNC 1.2.7503.0 fingerprint profile. -O2 -G0 with default/explicit sched=2. Candidate only until multiple nontrivial Kurohyou functions match."
+    },
+    "snc_1_2_7503_o2_sched1": {
+      "kind": "fingerprint_candidate",
+      "compiler": "matching/compilers/pspsnc_1.2.7503.0/pspsnc.exe",
+      "launcher_windows": [],
+      "launcher_posix": [
+        "wibo"
+      ],
+      "flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=1"
+      ],
+      "description": "SN Systems/Sony PSP SNC 1.2.7503.0 alternate scheduler fingerprint profile. Candidate only until multiple nontrivial Kurohyou functions match."
+    },
+    "mwccpsp_3_0_1_219_probe": {
+      "kind": "fingerprint_candidate",
+      "compiler": "matching/compilers/mwccpsp_3.0.1_219/mwccpsp.exe",
+      "launcher_windows": [],
+      "launcher_posix": [
+        "wibo"
+      ],
+      "flags": [
+        "-O4,p",
+        "-G0"
+      ],
+      "description": "Metrowerks C/C++ for MIPS/PSP 3.0.1 build 219 fingerprint profile. Flags are an initial probe only and must be tuned if the family looks promising."
+    },
+    "snc_1_2_7503_o2_sched2_debug_g": {
+      "kind": "matching_candidate",
+      "compiler": "matching/compilers/pspsnc_1.2.7503.0/pspsnc.exe",
+      "launcher_windows": [],
+      "launcher_posix": [
+        "wibo"
+      ],
+      "flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2"
+      ],
+      "description": "SNC 1.2.7503.0 O2/G0/sched2 with -g. Required by several byte-perfect Block 01 TUs."
+    },
+    "snc_1_2_7503_o2_sched2_retpts1": {
+      "kind": "matching_candidate",
+      "compiler": "matching/compilers/pspsnc_1.2.7503.0/pspsnc.exe",
+      "launcher_windows": [],
+      "launcher_posix": [
+        "wibo"
+      ],
+      "flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-Xretpts1"
+      ],
+      "description": "SNC 1.2.7503.0 O2/G0/sched2 with retpts1 return-point merging. Required by RecoverField60 exact match."
+    }
+  }
+}
