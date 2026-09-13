@@ -1,0 +1,48 @@
+name: decomp-report
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate public metadata
+        run: |
+          python tools/progress.py
+          python -m py_compile tools/generate_decompdev_report.py tools/progress.py
+
+      - name: Generate decomp.dev report
+        run: python tools/generate_decompdev_report.py
+
+      - name: Validate report shape
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("build/publish/report.json")
+          r=json.loads(p.read_text())
+          assert r["version"] == 2
+          assert int(r["measures"]["total_code"]) > 0
+          assert int(r["measures"]["matched_code"]) <= int(r["measures"]["total_code"])
+          assert r["units"]
+          print("report:", r["measures"]["matched_code_percent"], "% code")
+          PY
+
+      - name: Upload decomp.dev report
+        uses: actions/upload-artifact@v4
+        with:
+          name: NPJH50333_report
+          path: build/publish/report.json
+          if-no-files-found: error
