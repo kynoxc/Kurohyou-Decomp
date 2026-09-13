@@ -1,0 +1,532 @@
+{
+  "retail_load_base": "0x08800000",
+  "functions": [
+    {
+      "name": "CPlayerStateFactory_Set",
+      "address": "0x001E63D8",
+      "size": "0x20",
+      "source": "matching/src/001E63D8_player_state_factory_set.c",
+      "symbol": "match_001E63D8",
+      "priority": 1,
+      "notes": "Integer-only leaf; first compiler fingerprint target.",
+      "oracle_asm": "matching/oracle/001E63D8.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "CSceneCitySequenceCharMove_AdvanceAxis",
+      "address": "0x001A88C4",
+      "size": "0x50",
+      "source": "matching/src/001A88C4_advance_axis.c",
+      "symbol": "match_001A88C4",
+      "priority": 2,
+      "notes": "Four-float leaf. Retail ABI passes arguments in f12..f15; useful EABI fingerprint.",
+      "oracle_asm": "matching/oracle/001A88C4.s",
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_profile": "snc_debug_g",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "pure_exact_v14"
+    },
+    {
+      "name": "NormalizeDegrees",
+      "address": "0x001C58E4",
+      "size": "0x58",
+      "source": "matching/src/001C58E4_normalize_degrees.c",
+      "symbol": "match_001C58E4",
+      "priority": 3,
+      "notes": "Single-float leaf with loops and 360.0f materialization.",
+      "oracle_asm": "matching/oracle/001C58E4.s",
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_profile": "snc_debug_g",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "pure_exact_v13"
+    },
+    {
+      "name": "RetailNoopMode6",
+      "address": "0x001E2614",
+      "size": "0x08",
+      "source": "matching/src/001E2614_noop.c",
+      "symbol": "match_001E2614",
+      "priority": 4,
+      "notes": "Two-instruction no-op leaf. Pipeline sanity target; exact bytes are not sufficient to identify a compiler.",
+      "oracle_asm": "matching/oracle/001E2614.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailDistance2",
+      "address": "0x001C57E0",
+      "size": "0x20",
+      "source": "matching/src/001C57E0_distance2.c",
+      "symbol": "match_001C57E0",
+      "priority": 5,
+      "notes": "Four-float EABI leaf using sqrt.s. Strong ABI/FPU fingerprint because retail receives x0,y0,x1,y1 in f12..f15.",
+      "oracle_asm": "matching/oracle/001C57E0.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "CPlayerStateFactory_GetValue",
+      "address": "0x001E63F8",
+      "size": "0x20",
+      "source": "matching/src/001E63F8_state_value.c",
+      "symbol": "match_001E63F8",
+      "priority": 6,
+      "notes": "Integer pointer/null leaf immediately following the state setter; useful branch-delay/codegen fingerprint.",
+      "oracle_asm": "matching/oracle/001E63F8.s",
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_profile": "snc_debug_g",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "pure_exact_v13_v14"
+    },
+    {
+      "name": "RetailClassifyActorId",
+      "address": "0x001E2858",
+      "size": "0xA8",
+      "source": "matching/src/001E2858_actor_classify.cpp",
+      "symbol": "match_001E2858",
+      "priority": 7,
+      "notes": "Integer-only range classifier. Larger branch-layout fingerprint with no external calls or relocations.",
+      "oracle_asm": "matching/oracle/001E2858.s",
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_profile": "snc_debug_g",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "pure_exact_v13"
+    },
+    {
+      "name": "CPlayerController_ActorPredicate",
+      "address": "0x001E2810",
+      "size": "0x48",
+      "source": "matching/src/001E2810_actor_predicate.c",
+      "symbol": "match_001E2810",
+      "priority": 8,
+      "notes": "Caller of 0x1E2858. First relocation-aware matching target; R_MIPS_26 is resolved explicitly to the retail classifier address. Current V15 candidate is 17/18 words exact; only false zero materialization differs.",
+      "oracle_asm": "matching/oracle/001E2810.s",
+      "relocation_targets": {
+        "retail_001E2858": "0x001E2858"
+      },
+      "block01_matching_state": "NON_MATCHING",
+      "snc_profile": "snc_retpts1",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-Xretpts1"
+      ],
+      "block01_evidence": "near_exact_17_of_18",
+      "block01_best_metrics": {
+        "size": "72/72",
+        "equal_words": "17/18",
+        "word_similarity": 94.4444444444,
+        "differences": 1
+      }
+    },
+    {
+      "name": "CPlayerController_RecoverField60",
+      "address": "0x001E1860",
+      "size": "0x54",
+      "source": "matching/src/001E1860_recover_field60.c",
+      "symbol": "match_001E1860",
+      "priority": 9,
+      "notes": "Calls 0x23FF88 and 0x24B578, then clears controller+0x60 only when percent >=31. R_MIPS_26 call relocations are resolved to the audited retail targets before byte comparison.",
+      "oracle_asm": "matching/oracle/001E1860.s",
+      "relocation_targets": {
+        "retail_0023FF88": "0x0023FF88",
+        "retail_0024B578": "0x0024B578"
+      },
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_profile": "snc_retpts1",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-Xretpts1"
+      ],
+      "block01_evidence": "pure_exact_v14"
+    },
+    {
+      "name": "RetailAngleCompare",
+      "address": "0x001C59D0",
+      "size": "0xDC",
+      "source": "matching/src/001C59D0_angle_compare.c",
+      "symbol": "match_001C59D0",
+      "priority": 10,
+      "notes": "Full wrapped-angle comparator already represented by RetailAngleCompare; two NormalizeDegrees calls.",
+      "oracle_asm": "matching/oracle/001C59D0.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_001C58E4": "0x001C58E4"
+      },
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_profile": "snc_debug_g",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "pure_exact_v13"
+    },
+    {
+      "name": "RetailAngleWindowContains",
+      "address": "0x001C593C",
+      "size": "0x94",
+      "source": "matching/src/001C593C_angle_window.c",
+      "symbol": "match_001C593C",
+      "priority": 11,
+      "notes": "Full 3-float angle-window helper; exercises nested calls and EABI float arguments.",
+      "oracle_asm": "matching/oracle/001C593C.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_001C58E4": "0x001C58E4",
+        "retail_001C59D0": "0x001C59D0"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailCameraHeading1F77B4",
+      "address": "0x001F77B4",
+      "size": "0x60",
+      "source": "matching/src/001F77B4_camera_heading.c",
+      "symbol": "match_001F77B4",
+      "priority": 12,
+      "notes": "Camera heading helper including retail PI global and atan2 service boundary.",
+      "oracle_asm": "matching/oracle/001F77B4.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_005F32A0": "0x005F32A0",
+        "retail_004E0650": "0x004E0650"
+      },
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_profile": "snc_default",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "pure_exact_v5"
+    },
+    {
+      "name": "RetailApplyPlayerCameraHeading1A2870",
+      "address": "0x001A2870",
+      "size": "0x84",
+      "source": "matching/src/001A2870_apply_camera_heading.c",
+      "symbol": "match_001A2870",
+      "priority": 13,
+      "notes": "Full wrapper reconstructed from retail null checks, camera heading call, angle-window call, and player field writes.",
+      "oracle_asm": "matching/oracle/001A2870.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_001F77B4": "0x001F77B4",
+        "retail_001C593C": "0x001C593C"
+      },
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_profile": "snc_default",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "pure_exact_v6"
+    },
+    {
+      "name": "RetailDirection1936F0",
+      "address": "0x001936F0",
+      "size": "0xB4",
+      "source": "matching/src/001936F0_direction.c",
+      "symbol": "match_001936F0",
+      "priority": 14,
+      "notes": "Full pointer-output direction helper used by Walk; preserves separate cosine/sine call branches and retail PI global.",
+      "oracle_asm": "matching/oracle/001936F0.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_005E6E30": "0x005E6E30",
+        "retail_004E07B0": "0x004E07B0",
+        "retail_004E0828": "0x004E0828"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailAngleScalarCtorZero",
+      "address": "0x00193590",
+      "size": "0x2C",
+      "source": "matching/src/00193590_angle_ctor_zero.c",
+      "symbol": "match_00193590",
+      "priority": 15,
+      "notes": "Angle scalar default constructor; absolute vtable/data relocations.",
+      "oracle_asm": "matching/oracle/00193590.s",
+      "relocation_targets": {
+        "retail_00681368": "0x00681368",
+        "retail_005E6E50": "0x005E6E50"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailAngleScalarCtorValue",
+      "address": "0x001935BC",
+      "size": "0x2C",
+      "source": "matching/src/001935BC_angle_ctor_value.c",
+      "symbol": "match_001935BC",
+      "priority": 16,
+      "notes": "Angle scalar value constructor; one float EABI arg plus vtable/data relocations.",
+      "oracle_asm": "matching/oracle/001935BC.s",
+      "relocation_targets": {
+        "retail_00681368": "0x00681368",
+        "retail_005E6E50": "0x005E6E50"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailAngleScalarDtor",
+      "address": "0x001935E8",
+      "size": "0x34",
+      "source": "matching/src/001935E8_angle_dtor.c",
+      "symbol": "match_001935E8",
+      "priority": 17,
+      "notes": "Deleting-destructor style flag path; vtable write and retail free call.",
+      "oracle_asm": "matching/oracle/001935E8.s",
+      "relocation_targets": {
+        "retail_00681368": "0x00681368",
+        "retail_003D34F4": "0x003D34F4"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailAngleScalarGet",
+      "address": "0x0019361C",
+      "size": "0x08",
+      "source": "matching/src/0019361C_angle_get.c",
+      "symbol": "match_0019361C",
+      "priority": 18,
+      "notes": "Two-instruction float getter leaf.",
+      "oracle_asm": "matching/oracle/0019361C.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailAngleScalarReset",
+      "address": "0x00193624",
+      "size": "0x10",
+      "source": "matching/src/00193624_angle_reset.c",
+      "symbol": "match_00193624",
+      "priority": 19,
+      "notes": "Zero current angle and return one; delay-slot store fingerprint.",
+      "oracle_asm": "matching/oracle/00193624.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailAngleScalarNoop",
+      "address": "0x00193634",
+      "size": "0x08",
+      "source": "matching/src/00193634_noop.c",
+      "symbol": "match_00193634",
+      "priority": 20,
+      "notes": "Two-instruction no-op adjacent to angle update.",
+      "oracle_asm": "matching/oracle/00193634.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailAngleScalarTick",
+      "address": "0x0019363C",
+      "size": "0xB4",
+      "source": "matching/src/0019363C_angle_tick.c",
+      "symbol": "match_0019363C",
+      "priority": 21,
+      "notes": "Tick/target snap plus wrap to [0,360); branch-likely loop fingerprint.",
+      "oracle_asm": "matching/oracle/0019363C.s",
+      "relocation_targets": {
+        "retail_005E6E48": "0x005E6E48",
+        "retail_005E6E4C": "0x005E6E4C",
+        "retail_005E6E54": "0x005E6E54"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailAngleScalarSetTarget",
+      "address": "0x001937A4",
+      "size": "0x124",
+      "source": "matching/src/001937A4_angle_set_target.c",
+      "symbol": "match_001937A4",
+      "priority": 22,
+      "notes": "Full target/step setup, shortest wrapped distance, tick count and sign selection. Current V15 candidate has exact 16-word prefix and exact total size; remaining issue is FPU temporary allocation/CFG.",
+      "oracle_asm": "matching/oracle/001937A4.s",
+      "relocation_targets": {
+        "retail_005E6E4C": "0x005E6E4C",
+        "retail_00193948": "0x00193948"
+      },
+      "block01_matching_state": "NON_MATCHING",
+      "snc_profile": "snc_debug_g",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "best_v15_48_of_73",
+      "block01_best_metrics": {
+        "size": "292/292",
+        "equal_words": "48/73",
+        "word_similarity": 65.7534246575,
+        "differences": 25,
+        "exact_prefix_words": 16
+      }
+    },
+    {
+      "name": "RetailAngleWrap193948",
+      "address": "0x00193948",
+      "size": "0x5C",
+      "source": "matching/src/00193948_wrap_angle.c",
+      "symbol": "match_00193948",
+      "priority": 23,
+      "notes": "Second retail angle normalizer using absolute 0/360 globals; useful compiler scheduling fingerprint.",
+      "oracle_asm": "matching/oracle/00193948.s",
+      "relocation_targets": {
+        "retail_005E6E48": "0x005E6E48",
+        "retail_005E6E4C": "0x005E6E4C"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailPlayerIdleNoop",
+      "address": "0x001E663C",
+      "size": "0x08",
+      "source": "matching/src/001E663C_noop.c",
+      "symbol": "match_001E663C",
+      "priority": 24,
+      "notes": "Trivial state callback leaf; pipeline/control target only.",
+      "oracle_asm": "matching/oracle/001E663C.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailWalkEnterFlags",
+      "address": "0x001E69E8",
+      "size": "0x1C",
+      "source": "matching/src/001E69E8_walk_enter_flags.c",
+      "symbol": "match_001E69E8",
+      "priority": 25,
+      "notes": "Walk entry leaf: actor+0x104=1 and controller+0x60=0.",
+      "oracle_asm": "matching/oracle/001E69E8.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "RetailWalkClearActorFlag",
+      "address": "0x001E6A04",
+      "size": "0x10",
+      "source": "matching/src/001E6A04_walk_clear_actor_flag.c",
+      "symbol": "match_001E6A04",
+      "priority": 26,
+      "notes": "Walk leaf clears actor+0x1A8 in jr delay slot.",
+      "oracle_asm": "matching/oracle/001E6A04.s",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_CursorPosition",
+      "address": "0x00374840",
+      "size": "0x64",
+      "source": "matching/src/00374840_mainmenu_cursor_position.c",
+      "symbol": "match_00374840",
+      "priority": 27,
+      "notes": "Retail main-menu cursor node 0xEE positioning: authored CSE node plus visible-count base and 24 px row pitch.",
+      "oracle_asm": "matching/oracle/00374840.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_0032827C": "0x0032827C",
+        "retail_00374F40": "0x00374F40",
+        "retail_0032BD80": "0x0032BD80"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_CursorMotion",
+      "address": "0x003748A4",
+      "size": "0x48",
+      "source": "matching/src/003748A4_mainmenu_cursor_anim.c",
+      "symbol": "match_003748A4",
+      "priority": 28,
+      "notes": "Retail selector motion dispatcher choosing cursor_loop/cursor_out for CSE node 0xEE.",
+      "oracle_asm": "matching/oracle/003748A4.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_003895E0": "0x003895E0",
+        "retail_00613988": "0x00613988",
+        "retail_00613994": "0x00613994"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_BindRows",
+      "address": "0x003748EC",
+      "size": "0xB4",
+      "source": "matching/src/003748EC_mainmenu_bind_rows.c",
+      "symbol": "match_003748EC",
+      "priority": 29,
+      "notes": "Retail Text_menu row binder. Iterates at most seven table entries, resolves CSE nodes and text resources, then attaches text to each node. Current V15 candidate differs only in 7 prologue words; body from +0x3C is byte-identical.",
+      "oracle_asm": "matching/oracle/003748EC.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_0032827C": "0x0032827C",
+        "retail_00251364": "0x00251364",
+        "retail_00251440": "0x00251440",
+        "retail_00333250": "0x00333250",
+        "retail_00613770": "0x00613770"
+      },
+      "block01_matching_state": "NON_MATCHING",
+      "snc_profile": "snc_default",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2"
+      ],
+      "block01_evidence": "near_exact_38_of_45",
+      "block01_best_metrics": {
+        "size": "180/180",
+        "equal_words": "38/45",
+        "word_similarity": 84.4444444444,
+        "differences": 7,
+        "body_exact_from_offset": "0x3C"
+      }
+    },
+    {
+      "name": "SceneTitleMainmenu_VisibleBaseY",
+      "address": "0x00374F40",
+      "size": "0x18",
+      "source": "matching/src/00374F40_mainmenu_visible_base.c",
+      "symbol": "match_00374F40",
+      "priority": 30,
+      "notes": "Leaf lookup used by cursor positioning; returns the authored visible-count Y base from retail table 0x006137A8.",
+      "oracle_asm": "matching/oracle/00374F40.s",
+      "oracle_kind": "generated-retail-word-range",
+      "relocation_targets": {
+        "retail_006137A8": "0x006137A8"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    }
+  ]
+}
