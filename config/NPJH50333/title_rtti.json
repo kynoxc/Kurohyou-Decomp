@@ -1,0 +1,458 @@
+[
+  {
+    "name": "SceneTitle",
+    "string_address": "0x00612610",
+    "references": [
+      {
+        "address": "0x0068657C",
+        "context_start": "0x0068655C",
+        "words": [
+          "0x00364F80",
+          "0x00000000",
+          "0x003668B0",
+          "0x00000000",
+          "0x003653FC",
+          "0x00000000",
+          "0x00367060",
+          "0x0068D250",
+          "0x00612610",
+          "0x0068658C",
+          "0x00364F80",
+          "0x006125E8"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleBase",
+    "string_address": "0x00612C14",
+    "references": [
+      {
+        "address": "0x006865C4",
+        "context_start": "0x006865A4",
+        "words": [
+          "0x004C8914",
+          "0x00000000",
+          "0x004C8914",
+          "0x00000000",
+          "0x004C8914",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00612C14",
+          "0x006865D4",
+          "0x00368F44",
+          "0x00612C00"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleBattleReady",
+    "string_address": "0x00613050",
+    "references": [
+      {
+        "address": "0x0068660C",
+        "context_start": "0x006865EC",
+        "words": [
+          "0x0036AAE0",
+          "0x00000000",
+          "0x0036ACE0",
+          "0x00000000",
+          "0x0036AD24",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00613050",
+          "0x0068661C",
+          "0x0036AA1C",
+          "0x00613038"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleConnect",
+    "string_address": "0x006134AC",
+    "references": [
+      {
+        "address": "0x00686654",
+        "context_start": "0x00686634",
+        "words": [
+          "0x0036F654",
+          "0x00000000",
+          "0x0036D364",
+          "0x00000000",
+          "0x0036FA98",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x006134AC",
+          "0x00686664",
+          "0x0036CFA8",
+          "0x00613410"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleConnectSave",
+    "string_address": "0x00613684",
+    "references": [
+      {
+        "address": "0x0068669C",
+        "context_start": "0x0068667C",
+        "words": [
+          "0x00371870",
+          "0x00000000",
+          "0x00371964",
+          "0x00000000",
+          "0x0037196C",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00613684",
+          "0x006866AC",
+          "0x003717AC",
+          "0x00613670"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleLoadGame",
+    "string_address": "0x006136BC",
+    "references": [
+      {
+        "address": "0x006866E4",
+        "context_start": "0x006866C4",
+        "words": [
+          "0x00371C24",
+          "0x00000000",
+          "0x00371C44",
+          "0x00000000",
+          "0x00371C4C",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x006136BC",
+          "0x006866F4",
+          "0x00371B60",
+          "0x006136A8"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleLogo",
+    "string_address": "0x00613700",
+    "references": [
+      {
+        "address": "0x0068672C",
+        "context_start": "0x0068670C",
+        "words": [
+          "0x003721EC",
+          "0x00000000",
+          "0x003724C8",
+          "0x00000000",
+          "0x0037266C",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00613700",
+          "0x0068673C",
+          "0x00372064",
+          "0x006136E0"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleMainmenu",
+    "string_address": "0x006137C8",
+    "references": [
+      {
+        "address": "0x00686774",
+        "context_start": "0x00686754",
+        "words": [
+          "0x00374F58",
+          "0x00000000",
+          "0x00372FB8",
+          "0x00000000",
+          "0x003752EC",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x006137C8",
+          "0x00686784",
+          "0x00372CFC",
+          "0x00613740"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleMediaInstall",
+    "string_address": "0x00613A7C",
+    "references": [
+      {
+        "address": "0x006867BC",
+        "context_start": "0x0068679C",
+        "words": [
+          "0x00376718",
+          "0x00000000",
+          "0x003764CC",
+          "0x00000000",
+          "0x0037665C",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00613A7C",
+          "0x006867CC",
+          "0x00376344",
+          "0x00613A68"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleMenu",
+    "string_address": "0x00613B14",
+    "references": [
+      {
+        "address": "0x00686804",
+        "context_start": "0x006867E4",
+        "words": [
+          "0x00377EA8",
+          "0x00000000",
+          "0x0037715C",
+          "0x00000000",
+          "0x0037743C",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00613B14",
+          "0x00686814",
+          "0x00376DA8",
+          "0x00613B00"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleNewGame",
+    "string_address": "0x00613FA4",
+    "references": [
+      {
+        "address": "0x0068684C",
+        "context_start": "0x0068682C",
+        "words": [
+          "0x00379858",
+          "0x00000000",
+          "0x003791C4",
+          "0x00000000",
+          "0x00379328",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00613FA4",
+          "0x0068685C",
+          "0x0037903C",
+          "0x00613F90"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleOption",
+    "string_address": "0x0061408C",
+    "references": [
+      {
+        "address": "0x00686894",
+        "context_start": "0x00686874",
+        "words": [
+          "0x00379F2C",
+          "0x00000000",
+          "0x0037A0A4",
+          "0x00000000",
+          "0x0037A0AC",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x0061408C",
+          "0x006868A4",
+          "0x00379E68",
+          "0x00614078"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitlePassword",
+    "string_address": "0x006140C4",
+    "references": [
+      {
+        "address": "0x006868DC",
+        "context_start": "0x006868BC",
+        "words": [
+          "0x0037AEAC",
+          "0x00000000",
+          "0x0037B1E0",
+          "0x00000000",
+          "0x0037B358",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x006140C4",
+          "0x006868EC",
+          "0x0037AD24",
+          "0x006140B0"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleSaveGame",
+    "string_address": "0x00614704",
+    "references": [
+      {
+        "address": "0x00686924",
+        "context_start": "0x00686904",
+        "words": [
+          "0x0037C688",
+          "0x00000000",
+          "0x0037C6A8",
+          "0x00000000",
+          "0x0037C6B0",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00614704",
+          "0x00686934",
+          "0x0037C5C4",
+          "0x006146F0"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleSelectChara",
+    "string_address": "0x00614808",
+    "references": [
+      {
+        "address": "0x0068696C",
+        "context_start": "0x0068694C",
+        "words": [
+          "0x0037FB54",
+          "0x00000000",
+          "0x0037CAD4",
+          "0x00000000",
+          "0x00380154",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00614808",
+          "0x0068697C",
+          "0x0037C7D4",
+          "0x00614728"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleSelectMission",
+    "string_address": "0x00614D7C",
+    "references": [
+      {
+        "address": "0x006869B4",
+        "context_start": "0x00686994",
+        "words": [
+          "0x00383508",
+          "0x00000000",
+          "0x003823D0",
+          "0x00000000",
+          "0x00382548",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00614D7C",
+          "0x006869C4",
+          "0x00382188",
+          "0x00614CE0"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleSelectStage",
+    "string_address": "0x006152A4",
+    "references": [
+      {
+        "address": "0x006869FC",
+        "context_start": "0x006869DC",
+        "words": [
+          "0x00385CD0",
+          "0x00000000",
+          "0x0038529C",
+          "0x00000000",
+          "0x00385414",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x006152A4",
+          "0x00686A0C",
+          "0x00385054",
+          "0x00615210"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleSelectTag",
+    "string_address": "0x0061539C",
+    "references": [
+      {
+        "address": "0x00686A44",
+        "context_start": "0x00686A24",
+        "words": [
+          "0x00387C84",
+          "0x00000000",
+          "0x0038701C",
+          "0x00000000",
+          "0x00387194",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x0061539C",
+          "0x00686A54",
+          "0x00386DD4",
+          "0x00615350"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SceneTitleWarning",
+    "string_address": "0x00615470",
+    "references": [
+      {
+        "address": "0x00686A8C",
+        "context_start": "0x00686A6C",
+        "words": [
+          "0x00388934",
+          "0x00000000",
+          "0x00388E08",
+          "0x00000000",
+          "0x00388FAC",
+          "0x00000000",
+          "0x0038936C",
+          "0x0068D250",
+          "0x00615470",
+          "0x00686A9C",
+          "0x003887AC",
+          "0x00615458"
+        ]
+      }
+    ]
+  }
+]

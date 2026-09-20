@@ -1,0 +1,986 @@
+{
+  "schema": 1,
+  "target_sha256": "f82d09615506fd0aaa4a792844f0fb6908b0c07e5bb4fea1c992d4c7827f1975",
+  "units": [
+    {
+      "id": "game/scene/title/scene_title_mainmenu",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "class_name": "SceneTitleMainmenu",
+      "start": "0x00372A38",
+      "end": "0x00376248",
+      "original_tu_boundary_proven": false,
+      "basis": "RTTI name at 0x006137C8, metadata reference at 0x00686774, vtable methods and contiguous helpers ending with static initializer; next cluster is SceneTitleMediaInstall",
+      "verification_scope": "individual functions compiled with MATCH_FUNCTION; no complete linked TU match",
+      "functions": [
+        {
+          "address": "0x00372A38",
+          "end": "0x00372CFC",
+          "size": 708,
+          "name": "FUN_00372a38",
+          "candidate_source": null,
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00372CFC",
+          "end": "0x00372FB8",
+          "size": 700,
+          "name": "FUN_00372cfc",
+          "candidate_source": null,
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00372FB8",
+          "end": "0x0037311C",
+          "size": 356,
+          "name": "FUN_00372fb8",
+          "candidate_source": null,
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x0037311C",
+          "end": "0x003732F0",
+          "size": 468,
+          "name": "SceneTitleMainmenu_InitializeState",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003732F0",
+          "end": "0x00373524",
+          "size": 564,
+          "name": "SceneTitleMainmenu_InitializeMain",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373524",
+          "end": "0x00373674",
+          "size": 336,
+          "name": "SceneTitleMainmenu_InitializeDifficulty",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373674",
+          "end": "0x00373788",
+          "size": 276,
+          "name": "SceneTitleMainmenu_InitializeVs",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373788",
+          "end": "0x0037388C",
+          "size": 260,
+          "name": "SceneTitleMainmenu_InitializeCoop",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x0037388C",
+          "end": "0x00373950",
+          "size": 196,
+          "name": "SceneTitleMainmenu_ConfirmExit",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373950",
+          "end": "0x00373A24",
+          "size": 212,
+          "name": "SceneTitleMainmenu_StoryPrompt",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373A24",
+          "end": "0x00373B80",
+          "size": 348,
+          "name": "SceneTitleMainmenu_InitializePremium",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373B80",
+          "end": "0x00373D1C",
+          "size": 412,
+          "name": "SceneTitleMainmenu_InitializeExtra",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373D1C",
+          "end": "0x00373E74",
+          "size": 344,
+          "name": "SceneTitleMainmenu_ExtraResetPrompt",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373E74",
+          "end": "0x00373EE0",
+          "size": 108,
+          "name": "SceneTitleMainmenu_InitializeConnect",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373EE0",
+          "end": "0x00373FBC",
+          "size": 220,
+          "name": "SceneTitleMainmenu_ConnectionPrompt",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00373FBC",
+          "end": "0x0037410C",
+          "size": 336,
+          "name": "SceneTitleMainmenu_PremiumSelectPrompt",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x0037410C",
+          "end": "0x003742F0",
+          "size": 484,
+          "name": "SceneTitleMainmenu_InitializeKumite",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003742F0",
+          "end": "0x003744FC",
+          "size": 524,
+          "name": "SceneTitleMainmenu_ShowNextUnlock",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003744FC",
+          "end": "0x003745C0",
+          "size": 196,
+          "name": "SceneTitleMainmenu_ConfirmKumiteExit",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003745C0",
+          "end": "0x0037468C",
+          "size": 204,
+          "name": "SceneTitleMainmenu_PremiumPrompt",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x0037468C",
+          "end": "0x00374758",
+          "size": 204,
+          "name": "SceneTitleMainmenu_MainPrompt",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374758",
+          "end": "0x00374840",
+          "size": 232,
+          "name": "SceneTitleMainmenu_ConnectionWarning",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374840",
+          "end": "0x003748A4",
+          "size": 100,
+          "name": "SceneTitleMainmenu_CursorPosition",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003748A4",
+          "end": "0x003748EC",
+          "size": 72,
+          "name": "SceneTitleMainmenu_CursorMotion",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003748EC",
+          "end": "0x003749A0",
+          "size": 180,
+          "name": "SceneTitleMainmenu_BindRows",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003749A0",
+          "end": "0x00374ABC",
+          "size": 284,
+          "name": "SceneTitleMainmenu_LayoutRows",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374ABC",
+          "end": "0x00374BAC",
+          "size": 240,
+          "name": "SceneTitleMainmenu_ResetRowColors",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374BAC",
+          "end": "0x00374C48",
+          "size": 156,
+          "name": "SceneTitleMainmenu_PrepareCommonScene",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374C48",
+          "end": "0x00374C70",
+          "size": 40,
+          "name": "SceneTitleMainmenu_IsNewStory",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374C70",
+          "end": "0x00374C98",
+          "size": 40,
+          "name": "SceneTitleMainmenu_HasExtra",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374C98",
+          "end": "0x00374CC4",
+          "size": 44,
+          "name": "SceneTitleMainmenu_IsPremiumStory",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374CC4",
+          "end": "0x00374CF8",
+          "size": 52,
+          "name": "SceneTitleMainmenu_VisibleCount",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374CF8",
+          "end": "0x00374DA8",
+          "size": 176,
+          "name": "SceneTitleMainmenu_ExtraHasNewContent",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374DA8",
+          "end": "0x00374E48",
+          "size": 160,
+          "name": "SceneTitleMainmenu_KumiteHasNewContent",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374E48",
+          "end": "0x00374F40",
+          "size": 248,
+          "name": "SceneTitleMainmenu_HasRemainingUnlocks",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374F40",
+          "end": "0x00374F58",
+          "size": 24,
+          "name": "SceneTitleMainmenu_VisibleBaseY",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00374F58",
+          "end": "0x003752EC",
+          "size": 916,
+          "name": "FUN_00374f58",
+          "candidate_source": null,
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003752EC",
+          "end": "0x00375620",
+          "size": 820,
+          "name": "SceneTitleMainmenu_Frame",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x00375620",
+          "end": "0x003761A0",
+          "size": 2944,
+          "name": "SceneTitleMainmenu_ProcessInput",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        },
+        {
+          "address": "0x003761A0",
+          "end": "0x00376248",
+          "size": 168,
+          "name": "SceneTitleMainmenu_InitializeStatics",
+          "candidate_source": "src/game/scene/title/scene_title_mainmenu.c",
+          "boundary_evidence": "JAL/data entry references, continuous disassembly; exit at next candidate"
+        }
+      ],
+      "inventory_scope": "Intervalo continuo inventariado: 0x00372A38..0x00376248, 40 funciones; l\u00edmites de objeto original pendientes."
+    },
+    {
+      "id": "game/scene/title/scene_title_base",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "class_name": "SceneTitleBase selection helpers",
+      "original_tu_boundary_proven": false,
+      "basis": "Title RTTI cluster and references from main-menu input; only the saved-selection helpers have been reconstructed.",
+      "inventory_scope": "Inventario parcial de dependencias reconstruidas; no representa todas las funciones del objeto original.",
+      "verification_scope": "individual functions compiled with MATCH_FUNCTION; no complete linked TU match",
+      "functions": [
+        {
+          "address": "0x003693BC",
+          "end": "0x003693C8",
+          "size": 12,
+          "name": "TitleSelection_003693BC",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003693C8",
+          "end": "0x003693DC",
+          "size": 20,
+          "name": "TitleSelection_SaveMenuSelection",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003693DC",
+          "end": "0x003693E8",
+          "size": 12,
+          "name": "TitleSelection_GetMainSelection",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003693E8",
+          "end": "0x003693F4",
+          "size": 12,
+          "name": "TitleSelection_GetSubSelection",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003693F4",
+          "end": "0x00369400",
+          "size": 12,
+          "name": "TitleSelection_003693F4",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00369400",
+          "end": "0x0036940C",
+          "size": 12,
+          "name": "TitleSelection_00369400",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0036940C",
+          "end": "0x00369418",
+          "size": 12,
+          "name": "TitleSelection_0036940C",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00369418",
+          "end": "0x00369424",
+          "size": 12,
+          "name": "TitleSelection_00369418",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00369424",
+          "end": "0x00369444",
+          "size": 32,
+          "name": "TitleSelection_SetMode0To2",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00369444",
+          "end": "0x00369450",
+          "size": 12,
+          "name": "TitleSelection_GetMode",
+          "candidate_source": "src/game/scene/title/scene_title_base.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        }
+      ]
+    },
+    {
+      "id": "game/scene/scene_common",
+      "source": "src/game/scene/scene_common.c",
+      "class_name": "SceneCommon",
+      "original_tu_boundary_proven": false,
+      "basis": "Direct callees of SceneTitleMainmenu and adjacent scene prefix utilities; class prefix from field accesses.",
+      "inventory_scope": "Inventario parcial de dependencias reconstruidas; no representa todas las funciones del objeto original.",
+      "verification_scope": "individual functions compiled with MATCH_FUNCTION; no complete linked TU match",
+      "functions": [
+        {
+          "address": "0x00389338",
+          "end": "0x0038936C",
+          "size": 52,
+          "name": "SceneCommon_Destroy",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0038936C",
+          "end": "0x00389414",
+          "size": 168,
+          "name": "SceneCommon_PrepareRenderState",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Raw PRX HI16/LO16 at 0x0038938C/0x00389390 have r_info 0x00010005/0x00010006. Referenced PT_LOAD[1] starts 0x0068D378; encoded addend 0x0002E4D8 resolves to runtime-relative 0x006BB850. Match raw on-disk instructions, not Ghidra relocated memory."
+        },
+        {
+          "address": "0x00389414",
+          "end": "0x003894B0",
+          "size": 156,
+          "name": "SceneCommon_AreNodesComplete",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003894B0",
+          "end": "0x003894F8",
+          "size": 72,
+          "name": "SceneCommon_IsNodeTreeComplete",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003894F8",
+          "end": "0x00389574",
+          "size": 124,
+          "name": "SceneCommon_SetAllNodeFrames",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00389574",
+          "end": "0x003895B4",
+          "size": 64,
+          "name": "SceneCommon_SetNodeFrame",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003895B4",
+          "end": "0x003895E0",
+          "size": 44,
+          "name": "SceneCommon_ResetNodeFrame",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003895E0",
+          "end": "0x00389624",
+          "size": 68,
+          "name": "SceneCommon_PlayNodeMotion",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00389624",
+          "end": "0x0038965C",
+          "size": 56,
+          "name": "SceneCommon_SetNodeHidden",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0038965C",
+          "end": "0x003896A4",
+          "size": 72,
+          "name": "SceneCommon_SetNodePosition",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003896A4",
+          "end": "0x003896F0",
+          "size": 76,
+          "name": "SceneCommon_WrapIndex",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003896F0",
+          "end": "0x00389730",
+          "size": 64,
+          "name": "SceneCommon_InitializeState",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00389730",
+          "end": "0x00389774",
+          "size": 68,
+          "name": "SceneCommon_RequestState",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00389774",
+          "end": "0x003897E4",
+          "size": 112,
+          "name": "SceneCommon_IsTransitionActive",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003897E4",
+          "end": "0x00389884",
+          "size": 160,
+          "name": "SceneCommon_PollTransition",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003899F4",
+          "end": "0x00389AB4",
+          "size": 192,
+          "name": "SceneCommon_FormatNumberPair",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00389AB4",
+          "end": "0x00389AE4",
+          "size": 48,
+          "name": "SceneCommon_PlaySound",
+          "candidate_source": "src/game/scene/scene_common.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        }
+      ]
+    },
+    {
+      "id": "engine/cse/cse_node",
+      "source": "src/engine/cse/cse_node.c",
+      "class_name": "CseNode",
+      "original_tu_boundary_proven": false,
+      "basis": "Direct scene-helper callees, repeated node prefix offsets, recursive child-vector operations and virtual entries.",
+      "inventory_scope": "Inventario parcial de dependencias reconstruidas; no representa todas las funciones del objeto original.",
+      "verification_scope": "individual functions compiled with MATCH_FUNCTION; no complete linked TU match",
+      "functions": [
+        {
+          "address": "0x0032BB54",
+          "end": "0x0032BB7C",
+          "size": 40,
+          "name": "CseNode_IsAnimationComplete",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BB7C",
+          "end": "0x0032BC3C",
+          "size": 192,
+          "name": "CseNode_IsAnimationTreeComplete",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BC3C",
+          "end": "0x0032BCA0",
+          "size": 100,
+          "name": "CseNode_SetTreeFrame",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BCA0",
+          "end": "0x0032BD50",
+          "size": 176,
+          "name": "CseNode_SetLocalFrame",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BD50",
+          "end": "0x0032BD6C",
+          "size": 28,
+          "name": "CseNode_ResetMatrix",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BD6C",
+          "end": "0x0032BD78",
+          "size": 12,
+          "name": "CseNode_SetScale",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BD78",
+          "end": "0x0032BD80",
+          "size": 8,
+          "name": "CseNode_SetRotation",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BD80",
+          "end": "0x0032BD9C",
+          "size": 28,
+          "name": "CseNode_SetPosition",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BD9C",
+          "end": "0x0032BDCC",
+          "size": 48,
+          "name": "CseNode_GetColor",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BDCC",
+          "end": "0x0032BE7C",
+          "size": 176,
+          "name": "CseNode_SetTreeColor",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BE7C",
+          "end": "0x0032BED4",
+          "size": 88,
+          "name": "CseNode_SetLocalColor",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BED4",
+          "end": "0x0032BF84",
+          "size": 176,
+          "name": "CseNode_SetTreeColors",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BF84",
+          "end": "0x0032BFE4",
+          "size": 96,
+          "name": "CseNode_SetLocalColors",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032BFE4",
+          "end": "0x0032C014",
+          "size": 48,
+          "name": "CseNode_IsHidden",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032C014",
+          "end": "0x0032C0C4",
+          "size": 176,
+          "name": "CseNode_SetTreeHidden",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032C0C4",
+          "end": "0x0032C0F0",
+          "size": 44,
+          "name": "CseNode_SetLocalHidden",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0032C4EC",
+          "end": "0x0032C504",
+          "size": 24,
+          "name": "CseNode_GetAnimationId",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Return through 0x0032C500; separate virtual no-op begins 0x0032C504, referenced at 0x00685DBC."
+        },
+        {
+          "address": "0x0032C504",
+          "end": "0x0032C50C",
+          "size": 8,
+          "name": "CseNode_VirtualNoop",
+          "candidate_source": "src/engine/cse/cse_node.c",
+          "boundary_evidence": "Reconstructed C; count only fresh exact audit results."
+        }
+      ]
+    },
+    {
+      "id": "engine/ui/menu_selector",
+      "source": "src/engine/ui/menu_selector.c",
+      "class_name": "MenuSelector",
+      "original_tu_boundary_proven": false,
+      "basis": "Main-menu callees and their contiguous selector methods; prefix offsets and call edges.",
+      "inventory_scope": "Inventario parcial de dependencias reconstruidas; no representa todas las funciones del objeto original.",
+      "verification_scope": "individual functions compiled with MATCH_FUNCTION; no complete linked TU match",
+      "functions": [
+        {
+          "address": "0x002E0A6C",
+          "end": "0x002E0AB4",
+          "size": 72,
+          "name": "MenuSelector_Configure",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x002E0AB4",
+          "end": "0x002E0ABC",
+          "size": 8,
+          "name": "MenuSelector_VirtualNoop",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x002E0ABC",
+          "end": "0x002E0B58",
+          "size": 156,
+          "name": "MenuSelector_Update",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x002E0B58",
+          "end": "0x002E0C0C",
+          "size": 180,
+          "name": "MenuSelector_GetScrollOffset",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x002E0C0C",
+          "end": "0x002E0C30",
+          "size": 36,
+          "name": "MenuSelector_Reset",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x002E0C30",
+          "end": "0x002E0DF8",
+          "size": 456,
+          "name": "MenuSelector_SetSelection",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Reconstructed C; count only fresh exact audit results."
+        },
+        {
+          "address": "0x002E0DF8",
+          "end": "0x002E0FC0",
+          "size": 456,
+          "name": "MenuSelector_ReadRepeatMovement",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Reconstructed C; count only fresh exact audit results."
+        },
+        {
+          "address": "0x002E0FC0",
+          "end": "0x002E10C0",
+          "size": 256,
+          "name": "MenuSelector_ReadPressMovement",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Reconstructed C; count only fresh exact audit results."
+        },
+        {
+          "address": "0x002E10C0",
+          "end": "0x002E12DC",
+          "size": 540,
+          "name": "MenuSelector_ApplyMovement",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Full 540-byte range ending 0x002E12DC, including return and delay slot; replaces earlier truncated analysis-only seed."
+        },
+        {
+          "address": "0x002E12DC",
+          "end": "0x002E1408",
+          "size": 300,
+          "name": "MenuSelector_SetDisplayedPosition",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x002E1408",
+          "end": "0x002E1454",
+          "size": 76,
+          "name": "MenuSelector_SetFirstVisible",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x002E1454",
+          "end": "0x002E1518",
+          "size": 196,
+          "name": "MenuSelector_WrapSelection",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x002E1518",
+          "end": "0x002E1534",
+          "size": 28,
+          "name": "MenuSelector_ResetMovement",
+          "candidate_source": "src/engine/ui/menu_selector.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        }
+      ]
+    },
+    {
+      "id": "engine/audio/audio_events",
+      "source": "src/engine/audio/audio_events.c",
+      "class_name": "AudioEvents",
+      "original_tu_boundary_proven": false,
+      "basis": "SceneCommon sound-event callee and adjacent event lookup, parameter, stop and fade wrappers.",
+      "inventory_scope": "Inventario parcial de dependencias reconstruidas; no representa todas las funciones del objeto original.",
+      "verification_scope": "individual functions compiled with MATCH_FUNCTION; no complete linked TU match",
+      "functions": [
+        {
+          "address": "0x00311F78",
+          "end": "0x00312030",
+          "size": 184,
+          "name": "AudioEvents_PlayEvent",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00312030",
+          "end": "0x003120F8",
+          "size": 200,
+          "name": "AudioEvents_PlayGroupEvent",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003120F8",
+          "end": "0x0031212C",
+          "size": 52,
+          "name": "AudioEvents_PlayByName",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x0031212C",
+          "end": "0x00312170",
+          "size": 68,
+          "name": "AudioEvents_PlayGroupByName",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x00312170",
+          "end": "0x003121B4",
+          "size": 68,
+          "name": "AudioEvents_ScheduleHandleParameter",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Call/data references, disassembly through return/delay slot and next candidate entry; original TU boundary unproven."
+        },
+        {
+          "address": "0x003121B4",
+          "end": "0x00312218",
+          "size": 100,
+          "name": "AudioEvents_BeginHandleParameter",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x00312218",
+          "end": "0x00312238",
+          "size": 32,
+          "name": "AudioEvents_SetHandleParameter",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x00312238",
+          "end": "0x00312254",
+          "size": 28,
+          "name": "AudioEvents_SetCategoryParameter",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x00312254",
+          "end": "0x003122CC",
+          "size": 120,
+          "name": "AudioEvents_StopEvent",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x003122CC",
+          "end": "0x00312344",
+          "size": 120,
+          "name": "AudioEvents_StopGroupEvent",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x00312344",
+          "end": "0x00312388",
+          "size": 68,
+          "name": "AudioEvents_StopByName",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x00312388",
+          "end": "0x003123DC",
+          "size": 84,
+          "name": "AudioEvents_StopGroupByName",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x003123DC",
+          "end": "0x00312420",
+          "size": 68,
+          "name": "AudioEvents_StopHandle",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x00312420",
+          "end": "0x0031246C",
+          "size": 76,
+          "name": "AudioEvents_StopCategoryFrames",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        },
+        {
+          "address": "0x0031246C",
+          "end": "0x003124EC",
+          "size": 128,
+          "name": "AudioEvents_StopEventFrames",
+          "candidate_source": "src/engine/audio/audio_events.c",
+          "boundary_evidence": "Function boundary checked against retail return/delay and following call-referenced entry."
+        }
+      ]
+    }
+  ],
+  "nearby_pending": [
+    "SceneTitle",
+    "SceneTitleBase",
+    "SceneTitleMenu",
+    "SceneTitleNewGame",
+    "SceneTitleMediaInstall"
+  ],
+  "unassigned": "All executable bytes outside listed ranges remain unassigned and are included in whole-game denominator"
+}

@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """Generate a public objdiff Report-v2 compatible progress report.
 
-This report is intentionally generated only from committed, audited metadata.
-It contains no retail bytes and can run on public GitHub Actions.
+This report is generated from a current source-validated audit, including local
+uncommitted work. It contains no retail bytes and does not upload anything.
 
 Until the full TU/object pipeline is automated in CI, this is the bootstrap
 report consumed by decomp.dev. Overall CODE progress uses every executable
-section in the verified ELF as the denominator, not merely the 30-function
-Block 01 audit corpus.
+section in the verified ELF as the denominator. Report units are function
+verification units, not complete original translation units.
 """
 from __future__ import annotations
 import json
+from audit_evidence import load_verified_audit
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -48,13 +49,18 @@ def data_measures(total:int, matched:int=0, complete:int=0, total_units:int=1, c
 
 def main():
     layout=json.loads((ROOT/f"config/{VERSION}/elf_layout.json").read_text())
-    manifest=json.loads((ROOT/"matching/functions.json").read_text())
+    audit,manifest=load_verified_audit()
+    if layout['sha256'] != audit['target_sha256']:
+        raise ValueError('ELF layout and audit target differ')
+    verified={int(f["address"],0) for f in audit["functions"] if f["exact"]}
     funcs=sorted(manifest["functions"],key=lambda f:int(f["address"],0))
     exec_secs=[s for s in layout["sections"] if s["type"]==1 and (s["flags"]&4) and s["size"]]
     data_secs=[s for s in layout["sections"]
                if (s["flags"]&2) and not(s["flags"]&4) and s["size"] and s["type"] in (1,8)]
 
     total_code=sum(int(s["size"]) for s in exec_secs)
+    if total_code != audit['total_executable_bytes']:
+        raise ValueError('ELF layout and audit code totals differ')
     total_data=sum(int(s["size"]) for s in data_secs)
 
     units=[]
@@ -62,14 +68,15 @@ def main():
     complete_total=0
     known_total=0
 
-    # Partition each executable section into exact function ranges and honest
-    # unassigned gaps. The 30 audited functions currently all live in section 1.
+    # These are function verification units, not proof of original compiler TU boundaries.
+    # Keep every unknown executable range in the denominator.
     for sec in sorted(exec_secs,key=lambda s:s["addr"]):
         lo=int(sec["addr"]); hi=lo+int(sec["size"])
         inside=[f for f in funcs if lo <= int(f["address"],0) and int(f["address"],0)+int(f["size"],0) <= hi]
         cur=lo
         for f in inside:
             addr=int(f["address"],0); size=int(f["size"],0)
+            if addr < cur: raise ValueError("overlapping candidate function ranges")
             if addr>cur:
                 gap=addr-cur
                 units.append({
@@ -79,14 +86,14 @@ def main():
                     "functions":[],
                     "metadata":{"complete":False,"progress_categories":["unassigned"],"auto_generated":True},
                 })
-            exact=f.get("block01_matching_state")=="MATCHING_EXACT"
+            exact=addr in verified
             matched=size if exact else 0
             matched_total+=matched
             complete_total+=matched
             known_total+=size
             sim=100.0 if exact else 0.0
             units.append({
-                "name":f"block01/{addr:08X}_{f['name']}",
+                "name":f"{f.get('tu','legacy')}/{addr:08X}_{f['name']}",
                 "measures":code_measures(size,matched,matched,1,1 if exact else 0),
                 "sections":[{"name":".text","size":u64(size),"fuzzy_match_percent":sim}],
                 "functions":[{
@@ -130,7 +137,7 @@ def main():
 
     unassigned_code=total_code-known_total
     block01_meas=code_measures(known_total,matched_total,complete_total,len(funcs),
-                               sum(1 for f in funcs if f.get("block01_matching_state")=="MATCHING_EXACT"))
+                               len(verified))
     unassigned_meas=code_measures(unassigned_code,0,0,
                                   sum(1 for u in units if "unassigned" in u.get("metadata",{}).get("progress_categories",[])),0)
     data_meas=data_measures(total_data,0,0,len(data_secs),0)
@@ -156,7 +163,7 @@ def main():
         },
         "units":units,
         "categories":[
-            {"id":"block01","name":"Block 01 audited C/C++","measures":block01_meas},
+            {"id":"block01","name":"Audited C/C++ function ranges","measures":block01_meas},
             {"id":"unassigned","name":"Unassigned executable code","measures":unassigned_meas},
             {"id":"data","name":"Data / rodata / bss","measures":data_meas},
         ],

@@ -29,8 +29,7 @@
         "-G0",
         "-g",
         "-Xsched=2"
-      ],
-      "block01_evidence": "pure_exact_v14"
+      ]
     },
     {
       "name": "NormalizeDegrees",
@@ -49,8 +48,7 @@
         "-G0",
         "-g",
         "-Xsched=2"
-      ],
-      "block01_evidence": "pure_exact_v13"
+      ]
     },
     {
       "name": "RetailNoopMode6",
@@ -72,7 +70,7 @@
       "priority": 5,
       "notes": "Four-float EABI leaf using sqrt.s. Strong ABI/FPU fingerprint because retail receives x0,y0,x1,y1 in f12..f15.",
       "oracle_asm": "matching/oracle/001C57E0.s",
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "NON_MATCHING"
     },
     {
       "name": "CPlayerStateFactory_GetValue",
@@ -91,8 +89,7 @@
         "-G0",
         "-g",
         "-Xsched=2"
-      ],
-      "block01_evidence": "pure_exact_v13_v14"
+      ]
     },
     {
       "name": "RetailClassifyActorId",
@@ -111,8 +108,7 @@
         "-G0",
         "-g",
         "-Xsched=2"
-      ],
-      "block01_evidence": "pure_exact_v13"
+      ]
     },
     {
       "name": "CPlayerController_ActorPredicate",
@@ -135,7 +131,6 @@
         "-Xsched=2",
         "-Xretpts1"
       ],
-      "block01_evidence": "near_exact_17_of_18",
       "block01_best_metrics": {
         "size": "72/72",
         "equal_words": "17/18",
@@ -164,8 +159,7 @@
         "-G0",
         "-Xsched=2",
         "-Xretpts1"
-      ],
-      "block01_evidence": "pure_exact_v14"
+      ]
     },
     {
       "name": "RetailAngleCompare",
@@ -188,8 +182,7 @@
         "-G0",
         "-g",
         "-Xsched=2"
-      ],
-      "block01_evidence": "pure_exact_v13"
+      ]
     },
     {
       "name": "RetailAngleWindowContains",
@@ -205,7 +198,7 @@
         "retail_001C58E4": "0x001C58E4",
         "retail_001C59D0": "0x001C59D0"
       },
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "NON_MATCHING"
     },
     {
       "name": "RetailCameraHeading1F77B4",
@@ -221,15 +214,14 @@
         "retail_005F32A0": "0x005F32A0",
         "retail_004E0650": "0x004E0650"
       },
-      "block01_matching_state": "MATCHING_EXACT",
+      "block01_matching_state": "NON_MATCHING",
       "snc_profile": "snc_default",
       "snc_flags": [
         "-td=.",
         "-O2",
         "-G0",
         "-Xsched=2"
-      ],
-      "block01_evidence": "pure_exact_v5"
+      ]
     },
     {
       "name": "RetailApplyPlayerCameraHeading1A2870",
@@ -245,15 +237,14 @@
         "retail_001F77B4": "0x001F77B4",
         "retail_001C593C": "0x001C593C"
       },
-      "block01_matching_state": "MATCHING_EXACT",
+      "block01_matching_state": "NON_MATCHING",
       "snc_profile": "snc_default",
       "snc_flags": [
         "-td=.",
         "-O2",
         "-G0",
         "-Xsched=2"
-      ],
-      "block01_evidence": "pure_exact_v6"
+      ]
     },
     {
       "name": "RetailDirection1936F0",
@@ -285,7 +276,7 @@
         "retail_00681368": "0x00681368",
         "retail_005E6E50": "0x005E6E50"
       },
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "NON_MATCHING"
     },
     {
       "name": "RetailAngleScalarCtorValue",
@@ -300,7 +291,7 @@
         "retail_00681368": "0x00681368",
         "retail_005E6E50": "0x005E6E50"
       },
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "NON_MATCHING"
     },
     {
       "name": "RetailAngleScalarDtor",
@@ -364,7 +355,7 @@
         "retail_005E6E4C": "0x005E6E4C",
         "retail_005E6E54": "0x005E6E54"
       },
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "NON_MATCHING"
     },
     {
       "name": "RetailAngleScalarSetTarget",
@@ -388,7 +379,6 @@
         "-g",
         "-Xsched=2"
       ],
-      "block01_evidence": "best_v15_48_of_73",
       "block01_best_metrics": {
         "size": "292/292",
         "equal_words": "48/73",
@@ -410,7 +400,14 @@
         "retail_005E6E48": "0x005E6E48",
         "retail_005E6E4C": "0x005E6E4C"
       },
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-g"
+      ]
     },
     {
       "name": "RetailPlayerIdleNoop",
@@ -432,7 +429,7 @@
       "priority": 25,
       "notes": "Walk entry leaf: actor+0x104=1 and controller+0x60=0.",
       "oracle_asm": "matching/oracle/001E69E8.s",
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "NON_MATCHING"
     },
     {
       "name": "RetailWalkClearActorFlag",
@@ -443,13 +440,13 @@
       "priority": 26,
       "notes": "Walk leaf clears actor+0x1A8 in jr delay slot.",
       "oracle_asm": "matching/oracle/001E6A04.s",
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "NON_MATCHING"
     },
     {
       "name": "SceneTitleMainmenu_CursorPosition",
       "address": "0x00374840",
       "size": "0x64",
-      "source": "matching/src/00374840_mainmenu_cursor_position.c",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
       "symbol": "match_00374840",
       "priority": 27,
       "notes": "Retail main-menu cursor node 0xEE positioning: authored CSE node plus visible-count base and 24 px row pitch.",
@@ -460,13 +457,21 @@
         "retail_00374F40": "0x00374F40",
         "retail_0032BD80": "0x0032BD80"
       },
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "MATCHING_EXACT",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374840"
+      ]
     },
     {
       "name": "SceneTitleMainmenu_CursorMotion",
       "address": "0x003748A4",
       "size": "0x48",
-      "source": "matching/src/003748A4_mainmenu_cursor_anim.c",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
       "symbol": "match_003748A4",
       "priority": 28,
       "notes": "Retail selector motion dispatcher choosing cursor_loop/cursor_out for CSE node 0xEE.",
@@ -477,13 +482,23 @@
         "retail_00613988": "0x00613988",
         "retail_00613994": "0x00613994"
       },
-      "block01_matching_state": "MATCHING_EXACT"
+      "block01_matching_state": "MATCHING_EXACT",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-Xretpts1",
+        "-DMATCH_FUNCTION=0x003748A4"
+      ],
+      "tu": "game/scene/title/scene_title_mainmenu"
     },
     {
       "name": "SceneTitleMainmenu_BindRows",
       "address": "0x003748EC",
       "size": "0xB4",
-      "source": "matching/src/003748EC_mainmenu_bind_rows.c",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
       "symbol": "match_003748EC",
       "priority": 29,
       "notes": "Retail Text_menu row binder. Iterates at most seven table entries, resolves CSE nodes and text resources, then attaches text to each node. Current V15 candidate differs only in 7 prologue words; body from +0x3C is byte-identical.",
@@ -502,22 +517,23 @@
         "-td=.",
         "-O2",
         "-G0",
-        "-Xsched=2"
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003748EC"
       ],
-      "block01_evidence": "near_exact_38_of_45",
       "block01_best_metrics": {
         "size": "180/180",
         "equal_words": "38/45",
         "word_similarity": 84.4444444444,
         "differences": 7,
         "body_exact_from_offset": "0x3C"
-      }
+      },
+      "tu": "game/scene/title/scene_title_mainmenu"
     },
     {
       "name": "SceneTitleMainmenu_VisibleBaseY",
       "address": "0x00374F40",
       "size": "0x18",
-      "source": "matching/src/00374F40_mainmenu_visible_base.c",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
       "symbol": "match_00374F40",
       "priority": 30,
       "notes": "Leaf lookup used by cursor positioning; returns the authored visible-count Y base from retail table 0x006137A8.",
@@ -526,6 +542,2391 @@
       "relocation_targets": {
         "retail_006137A8": "0x006137A8"
       },
+      "block01_matching_state": "MATCHING_EXACT",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374F40"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeState",
+      "address": "0x0037311C",
+      "size": "0x1D4",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_0037311C",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0037311C",
+        "-g"
+      ],
+      "relocation_targets": {
+        "retail_0061378C": "0x0061378C",
+        "retail_00389624": "0x00389624",
+        "retail_003732F0": "0x003732F0",
+        "retail_00373524": "0x00373524",
+        "retail_00373674": "0x00373674",
+        "retail_00373788": "0x00373788",
+        "retail_0037388C": "0x0037388C",
+        "retail_00373950": "0x00373950",
+        "retail_00373A24": "0x00373A24",
+        "retail_00373B80": "0x00373B80",
+        "retail_00373D1C": "0x00373D1C",
+        "retail_00373E74": "0x00373E74",
+        "retail_00373EE0": "0x00373EE0",
+        "retail_00373FBC": "0x00373FBC",
+        "retail_0037410C": "0x0037410C",
+        "retail_003742F0": "0x003742F0",
+        "retail_003744FC": "0x003744FC",
+        "retail_003745C0": "0x003745C0",
+        "retail_0037468C": "0x0037468C",
+        "retail_00374758": "0x00374758",
+        "$LSW_1": "0x006139C8"
+      },
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "SceneTitleMainmenu_LayoutRows",
+      "address": "0x003749A0",
+      "size": "0x11C",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_003749A0",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003749A0"
+      ],
+      "relocation_targets": {
+        "retail_00613754": "0x00613754",
+        "retail_0061378C": "0x0061378C",
+        "retail_00389624": "0x00389624",
+        "retail_0032827C": "0x0032827C",
+        "retail_00374F40": "0x00374F40",
+        "retail_0032BD80": "0x0032BD80"
+      },
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "SceneTitleMainmenu_IsNewStory",
+      "address": "0x00374C48",
+      "size": "0x28",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374C48",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374C48"
+      ],
+      "relocation_targets": {
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_HasExtra",
+      "address": "0x00374C70",
+      "size": "0x28",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374C70",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374C70"
+      ],
+      "relocation_targets": {
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_IsPremiumStory",
+      "address": "0x00374C98",
+      "size": "0x2C",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374C98",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374C98"
+      ],
+      "relocation_targets": {
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_VisibleCount",
+      "address": "0x00374CC4",
+      "size": "0x34",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374CC4",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374CC4",
+        "-g"
+      ],
+      "relocation_targets": {
+        "retail_00374C70": "0x00374C70"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_ExtraHasNewContent",
+      "address": "0x00374CF8",
+      "size": "0xB0",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374CF8",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374CF8"
+      ],
+      "relocation_targets": {
+        "retail_0023FF88": "0x0023FF88",
+        "retail_00374DA8": "0x00374DA8",
+        "retail_00374C70": "0x00374C70",
+        "retail_00246000": "0x00246000"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_KumiteHasNewContent",
+      "address": "0x00374DA8",
+      "size": "0xA0",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374DA8",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374DA8",
+        "-g"
+      ],
+      "relocation_targets": {
+        "retail_0023FF88": "0x0023FF88",
+        "retail_00246000": "0x00246000"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeConnect",
+      "address": "0x00373E74",
+      "size": "0x6C",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373E74",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373E74"
+      ],
+      "relocation_targets": {
+        "retail_00389624": "0x00389624",
+        "retail_0036573C": "0x0036573C",
+        "retail_002F90A0": "0x002F90A0"
+      },
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeVs",
+      "address": "0x00373674",
+      "size": "0x114",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373674",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373674",
+        "-g"
+      ],
+      "relocation_targets": {
+        "retail_0036A22C": "0x0036A22C",
+        "retail_002F90A0": "0x002F90A0",
+        "retail_003749A0": "0x003749A0",
+        "retail_00251364": "0x00251364",
+        "retail_003748A4": "0x003748A4",
+        "retail_0061387C": "0x0061387C",
+        "retail_003693E8": "0x003693E8",
+        "retail_00613870": "0x00613870",
+        "retail_00251440": "0x00251440",
+        "retail_002E0C30": "0x002E0C30",
+        "retail_00374840": "0x00374840",
+        "retail_006138C8": "0x006138C8",
+        "retail_003E4710": "0x003E4710",
+        "retail_002E0A6C": "0x002E0A6C",
+        "retail_0036A29C": "0x0036A29C",
+        "retail_003748EC": "0x003748EC"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeCoop",
+      "address": "0x00373788",
+      "size": "0x104",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373788",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373788",
+        "-g"
+      ],
+      "relocation_targets": {
+        "retail_0036A22C": "0x0036A22C",
+        "retail_003749A0": "0x003749A0",
+        "retail_00613888": "0x00613888",
+        "retail_00251364": "0x00251364",
+        "retail_003748A4": "0x003748A4",
+        "retail_003693E8": "0x003693E8",
+        "retail_006138D4": "0x006138D4",
+        "retail_00251440": "0x00251440",
+        "retail_00613890": "0x00613890",
+        "retail_002E0C30": "0x002E0C30",
+        "retail_00374840": "0x00374840",
+        "retail_003E4710": "0x003E4710",
+        "retail_002E0A6C": "0x002E0A6C",
+        "retail_0036A29C": "0x0036A29C",
+        "retail_003748EC": "0x003748EC"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_ConfirmExit",
+      "address": "0x0037388C",
+      "size": "0xC4",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_0037388C",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0037388C"
+      ],
+      "relocation_targets": {
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_00251364": "0x00251364",
+        "retail_006138E0": "0x006138E0",
+        "retail_00251440": "0x00251440",
+        "retail_003E4710": "0x003E4710",
+        "retail_002E2E38": "0x002E2E38"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_ConfirmKumiteExit",
+      "address": "0x003744FC",
+      "size": "0xC4",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_003744FC",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003744FC"
+      ],
+      "relocation_targets": {
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_00251364": "0x00251364",
+        "retail_006138E0": "0x006138E0",
+        "retail_00251440": "0x00251440",
+        "retail_003E4710": "0x003E4710",
+        "retail_002E2E38": "0x002E2E38"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_ConnectionPrompt",
+      "address": "0x00373EE0",
+      "size": "0xDC",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373EE0",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373EE0"
+      ],
+      "relocation_targets": {
+        "retail_002F90A0": "0x002F90A0",
+        "retail_00613934": "0x00613934",
+        "retail_00389624": "0x00389624",
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_00251364": "0x00251364",
+        "retail_00251440": "0x00251440",
+        "retail_003E4710": "0x003E4710"
+      },
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "SceneTitleMainmenu_PremiumPrompt",
+      "address": "0x003745C0",
+      "size": "0xCC",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_003745C0",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003745C0"
+      ],
+      "relocation_targets": {
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_002F90A0": "0x002F90A0",
+        "retail_00251364": "0x00251364",
+        "retail_00373A24": "0x00373A24",
+        "retail_00251440": "0x00251440",
+        "retail_00613964": "0x00613964",
+        "retail_003E4710": "0x003E4710"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_MainPrompt",
+      "address": "0x0037468C",
+      "size": "0xCC",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_0037468C",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0037468C"
+      ],
+      "relocation_targets": {
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_002F90A0": "0x002F90A0",
+        "retail_00251364": "0x00251364",
+        "retail_00251440": "0x00251440",
+        "retail_003732F0": "0x003732F0",
+        "retail_00613970": "0x00613970",
+        "retail_003E4710": "0x003E4710"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_ConnectionWarning",
+      "address": "0x00374758",
+      "size": "0xE8",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374758",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374758"
+      ],
+      "relocation_targets": {
+        "retail_003749A0": "0x003749A0",
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_002F90A0": "0x002F90A0",
+        "retail_00389624": "0x00389624",
+        "retail_00251364": "0x00251364",
+        "retail_0061397C": "0x0061397C",
+        "retail_00251440": "0x00251440",
+        "retail_003E4710": "0x003E4710"
+      },
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "SceneTitleMainmenu_PrepareCommonScene",
+      "address": "0x00374BAC",
+      "size": "0x9C",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374BAC",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374BAC"
+      ],
+      "relocation_targets": {
+        "retail_002F90A0": "0x002F90A0",
+        "retail_002F92A4": "0x002F92A4",
+        "retail_002F995C": "0x002F995C"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeMain",
+      "address": "0x003732F0",
+      "size": "0x234",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_003732F0",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_00251440": "0x00251440",
+        "retail_0036A29C": "0x0036A29C",
+        "retail_00374CF8": "0x00374CF8",
+        "retail_006137F0": "0x006137F0",
+        "retail_003748A4": "0x003748A4",
+        "retail_0061378C": "0x0061378C",
+        "retail_0061379C": "0x0061379C",
+        "retail_006138B0": "0x006138B0",
+        "retail_00251364": "0x00251364",
+        "retail_0024B214": "0x0024B214",
+        "retail_003E4710": "0x003E4710",
+        "retail_0024CB40": "0x0024CB40",
+        "retail_0061381C": "0x0061381C",
+        "retail_0036A22C": "0x0036A22C",
+        "retail_0024ADDC": "0x0024ADDC",
+        "retail_002F90A0": "0x002F90A0",
+        "retail_0023FF88": "0x0023FF88",
+        "retail_00374840": "0x00374840",
+        "retail_00389624": "0x00389624",
+        "retail_00374C48": "0x00374C48",
+        "retail_00613798": "0x00613798",
+        "retail_006137A4": "0x006137A4",
+        "retail_00374CC4": "0x00374CC4",
+        "retail_003749A0": "0x003749A0",
+        "retail_003748EC": "0x003748EC",
+        "retail_00246000": "0x00246000"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003732F0"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeDifficulty",
+      "address": "0x00373524",
+      "size": "0x150",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373524",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00251440": "0x00251440",
+        "retail_0036A29C": "0x0036A29C",
+        "retail_002E0C30": "0x002E0C30",
+        "retail_003748A4": "0x003748A4",
+        "retail_0061378C": "0x0061378C",
+        "retail_00251364": "0x00251364",
+        "retail_003E4710": "0x003E4710",
+        "retail_00613838": "0x00613838",
+        "retail_0036A22C": "0x0036A22C",
+        "retail_0023FF88": "0x0023FF88",
+        "retail_00374840": "0x00374840",
+        "retail_002E0A6C": "0x002E0A6C",
+        "retail_00389624": "0x00389624",
+        "retail_006138BC": "0x006138BC",
+        "retail_0061380C": "0x0061380C",
+        "retail_003749A0": "0x003749A0",
+        "retail_003748EC": "0x003748EC",
+        "retail_00246000": "0x00246000"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373524",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_StoryPrompt",
+      "address": "0x00373950",
+      "size": "0xd4",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373950",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00251440": "0x00251440",
+        "retail_00251364": "0x00251364",
+        "retail_003E4710": "0x003E4710",
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_00613904": "0x00613904",
+        "retail_006138EC": "0x006138EC",
+        "retail_006138F8": "0x006138F8"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373950"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializePremium",
+      "address": "0x00373A24",
+      "size": "0x15c",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373A24",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00251364": "0x00251364",
+        "retail_00613910": "0x00613910",
+        "retail_002F90A0": "0x002F90A0",
+        "retail_003748A4": "0x003748A4",
+        "retail_0036A29C": "0x0036A29C",
+        "retail_00374840": "0x00374840",
+        "retail_00389624": "0x00389624",
+        "retail_003749A0": "0x003749A0",
+        "retail_00251440": "0x00251440",
+        "retail_002E0A6C": "0x002E0A6C",
+        "retail_0036A22C": "0x0036A22C",
+        "retail_003E4710": "0x003E4710",
+        "retail_0061378C": "0x0061378C",
+        "retail_00613848": "0x00613848",
+        "retail_003748EC": "0x003748EC",
+        "retail_00613850": "0x00613850",
+        "retail_00246000": "0x00246000",
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373A24",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeExtra",
+      "address": "0x00373B80",
+      "size": "0x19c",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373B80",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_002E0C30": "0x002E0C30",
+        "retail_00251364": "0x00251364",
+        "retail_003748A4": "0x003748A4",
+        "retail_0036A29C": "0x0036A29C",
+        "retail_00374DA8": "0x00374DA8",
+        "retail_00374840": "0x00374840",
+        "retail_003693E8": "0x003693E8",
+        "retail_00389624": "0x00389624",
+        "retail_0061391C": "0x0061391C",
+        "retail_003749A0": "0x003749A0",
+        "retail_00251440": "0x00251440",
+        "retail_002E0A6C": "0x002E0A6C",
+        "retail_0036A22C": "0x0036A22C",
+        "retail_00613864": "0x00613864",
+        "retail_003E4710": "0x003E4710",
+        "retail_0061378C": "0x0061378C",
+        "retail_00613858": "0x00613858",
+        "retail_003748EC": "0x003748EC",
+        "retail_00246000": "0x00246000",
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373B80",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_ExtraResetPrompt",
+      "address": "0x00373D1C",
+      "size": "0x158",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373D1C",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_00251364": "0x00251364",
+        "retail_002F90A0": "0x002F90A0",
+        "retail_002402D8": "0x002402D8",
+        "retail_00389624": "0x00389624",
+        "retail_00245FA4": "0x00245FA4",
+        "retail_003749A0": "0x003749A0",
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_00240334": "0x00240334",
+        "retail_00251440": "0x00251440",
+        "retail_003E4710": "0x003E4710",
+        "retail_00613928": "0x00613928",
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373D1C"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_PremiumSelectPrompt",
+      "address": "0x00373FBC",
+      "size": "0x150",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00373FBC",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00251364": "0x00251364",
+        "retail_003748A4": "0x003748A4",
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_00613940": "0x00613940",
+        "retail_00251440": "0x00251440",
+        "retail_003E4710": "0x003E4710",
+        "retail_0061394C": "0x0061394C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00373FBC",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeKumite",
+      "address": "0x0037410C",
+      "size": "0x1e4",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_0037410C",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_002E0C30": "0x002E0C30",
+        "retail_00251364": "0x00251364",
+        "retail_003748A4": "0x003748A4",
+        "retail_0036A29C": "0x0036A29C",
+        "retail_00374840": "0x00374840",
+        "retail_00389624": "0x00389624",
+        "retail_003749A0": "0x003749A0",
+        "retail_00251440": "0x00251440",
+        "retail_002E0A6C": "0x002E0A6C",
+        "retail_0036A22C": "0x0036A22C",
+        "retail_00613958": "0x00613958",
+        "retail_006138A4": "0x006138A4",
+        "retail_003E4710": "0x003E4710",
+        "retail_0061378C": "0x0061378C",
+        "retail_00613898": "0x00613898",
+        "retail_003748EC": "0x003748EC",
+        "retail_00246000": "0x00246000",
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0037410C",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_HasRemainingUnlocks",
+      "address": "0x00374E48",
+      "size": "0xf8",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374E48",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00374C70": "0x00374C70",
+        "retail_00246000": "0x00246000",
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374E48",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_ShowNextUnlock",
+      "address": "0x003742F0",
+      "size": "0x20c",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_003742F0",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00251364": "0x00251364",
+        "retail_002F90A0": "0x002F90A0",
+        "retail_00245F4C": "0x00245F4C",
+        "retail_00373A24": "0x00373A24",
+        "retail_002E2CB0": "0x002E2CB0",
+        "retail_00251440": "0x00251440",
+        "retail_00246000": "0x00246000",
+        "retail_0023FF88": "0x0023FF88"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003742F0",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_InitializeStatics",
+      "address": "0x003761A0",
+      "size": "0xa8",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_003761A0",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671A10": "0x00671A10",
+        "retail_00671A08": "0x00671A08",
+        "retail_00671A24": "0x00671A24",
+        "retail_00613748": "0x00613748",
+        "retail_003DDD88": "0x003DDD88",
+        "retail_00671A18": "0x00671A18",
+        "retail_0061374C": "0x0061374C",
+        "retail_00671A0C": "0x00671A0C",
+        "retail_00671A14": "0x00671A14",
+        "retail_003D1234": "0x003D1234"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003761A0"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_ResetRowColors",
+      "address": "0x00374ABC",
+      "size": "0xf0",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00374ABC",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_0032827C": "0x0032827C",
+        "retail_003DDD88": "0x003DDD88",
+        "retail_0032BDCC": "0x0032BDCC",
+        "retail_00613770": "0x00613770"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00374ABC"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_Frame",
+      "address": "0x003752EC",
+      "size": "0x334",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_003752EC",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00252150": "0x00252150",
+        "retail_0023FF88": "0x0023FF88",
+        "retail_002F9050": "0x002F9050",
+        "retail_002F8E70": "0x002F8E70",
+        "retail_0036940C": "0x0036940C",
+        "retail_00375620": "0x00375620",
+        "retail_00327FA0": "0x00327FA0",
+        "retail_003693F4": "0x003693F4",
+        "retail_00382A88": "0x00382A88",
+        "retail_00328058": "0x00328058",
+        "retail_0037311C": "0x0037311C",
+        "retail_003693C8": "0x003693C8",
+        "retail_002543D0": "0x002543D0",
+        "retail_0036573C": "0x0036573C",
+        "retail_003897E4": "0x003897E4",
+        "retail_002E2DE0": "0x002E2DE0",
+        "retail_00374ABC": "0x00374ABC",
+        "retail_0025406C": "0x0025406C",
+        "retail_00252514": "0x00252514",
+        "retail_00389730": "0x00389730",
+        "retail_00245FA4": "0x00245FA4",
+        "retail_00389774": "0x00389774"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003752EC",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneTitleMainmenu_ProcessInput",
+      "address": "0x00375620",
+      "size": "0xb80",
+      "source": "src/game/scene/title/scene_title_mainmenu.c",
+      "symbol": "match_00375620",
+      "tu": "game/scene/title/scene_title_mainmenu",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_002E0C30": "0x002E0C30",
+        "retail_002E3D2C": "0x002E3D2C",
+        "retail_00245FA4": "0x00245FA4",
+        "retail_002E2DC4": "0x002E2DC4",
+        "retail_00389730": "0x00389730",
+        "retail_003748A4": "0x003748A4",
+        "retail_0023FF88": "0x0023FF88",
+        "retail_0037388C": "0x0037388C",
+        "retail_002E2DE0": "0x002E2DE0",
+        "retail_0061380C": "0x0061380C",
+        "retail_0032827C": "0x0032827C",
+        "retail_002E2DEC": "0x002E2DEC",
+        "retail_00389AB4": "0x00389AB4",
+        "retail_0036573C": "0x0036573C",
+        "retail_0036A22C": "0x0036A22C",
+        "retail_006138A4": "0x006138A4",
+        "retail_003693C8": "0x003693C8",
+        "retail_003C6764": "0x003C6764",
+        "retail_006137F0": "0x006137F0",
+        "retail_00613864": "0x00613864",
+        "retail_00613850": "0x00613850",
+        "retail_003742F0": "0x003742F0",
+        "retail_00613890": "0x00613890",
+        "retail_002E0ABC": "0x002E0ABC",
+        "retail_003744FC": "0x003744FC",
+        "retail_00374840": "0x00374840",
+        "retail_00374E48": "0x00374E48",
+        "retail_002E0A6C": "0x002E0A6C",
+        "retail_0032BC3C": "0x0032BC3C",
+        "retail_0061387C": "0x0061387C",
+        "$LSW_1": "0x00613A18"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00375620",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneCommon_AreNodesComplete",
+      "address": "0x00389414",
+      "size": "0x9c",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_00389414",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_0032BB54": "0x0032BB54",
+        "retail_0032827C": "0x0032827C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00389414",
+        "-Xretpts1"
+      ]
+    },
+    {
+      "name": "SceneCommon_IsNodeTreeComplete",
+      "address": "0x003894B0",
+      "size": "0x48",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_003894B0",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0032BB7C": "0x0032BB7C",
+        "retail_0032827C": "0x0032827C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003894B0"
+      ]
+    },
+    {
+      "name": "SceneCommon_SetAllNodeFrames",
+      "address": "0x003894F8",
+      "size": "0x7c",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_003894F8",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_0032BC3C": "0x0032BC3C",
+        "retail_0032817C": "0x0032817C",
+        "retail_00328264": "0x00328264"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003894F8",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneCommon_SetNodeFrame",
+      "address": "0x00389574",
+      "size": "0x40",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_00389574",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0032BC3C": "0x0032BC3C",
+        "retail_0032827C": "0x0032827C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00389574"
+      ]
+    },
+    {
+      "name": "SceneCommon_ResetNodeFrame",
+      "address": "0x003895B4",
+      "size": "0x2c",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_003895B4",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0032BC3C": "0x0032BC3C",
+        "retail_0032827C": "0x0032827C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003895B4"
+      ]
+    },
+    {
+      "name": "SceneCommon_PlayNodeMotion",
+      "address": "0x003895E0",
+      "size": "0x44",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_003895E0",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_003E4710": "0x003E4710",
+        "retail_00328330": "0x00328330"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003895E0"
+      ]
+    },
+    {
+      "name": "SceneCommon_SetNodeHidden",
+      "address": "0x00389624",
+      "size": "0x38",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_00389624",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0032827C": "0x0032827C",
+        "retail_0032C014": "0x0032C014"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00389624"
+      ]
+    },
+    {
+      "name": "SceneCommon_SetNodePosition",
+      "address": "0x0038965C",
+      "size": "0x48",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_0038965C",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0032BD80": "0x0032BD80",
+        "retail_0032827C": "0x0032827C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0038965C"
+      ]
+    },
+    {
+      "name": "SceneCommon_WrapIndex",
+      "address": "0x003896A4",
+      "size": "0x4c",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_003896A4",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003896A4"
+      ]
+    },
+    {
+      "name": "SceneCommon_InitializeState",
+      "address": "0x003896F0",
+      "size": "0x40",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_003896F0",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003896F0",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneCommon_RequestState",
+      "address": "0x00389730",
+      "size": "0x44",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_00389730",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00389730",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneCommon_IsTransitionActive",
+      "address": "0x00389774",
+      "size": "0x70",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_00389774",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00389774",
+        "-Xretpts1"
+      ]
+    },
+    {
+      "name": "SceneCommon_PollTransition",
+      "address": "0x003897E4",
+      "size": "0xa0",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_003897E4",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003897E4",
+        "-g"
+      ]
+    },
+    {
+      "name": "SceneCommon_PlaySound",
+      "address": "0x00389AB4",
+      "size": "0x30",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_00389AB4",
+      "tu": "game/scene/scene_common",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00311F78": "0x00311F78",
+        "retail_0031010C": "0x0031010C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00389AB4"
+      ]
+    },
+    {
+      "name": "TitleSelection_003693BC",
+      "address": "0x003693BC",
+      "size": "0xc",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_003693BC",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671048": "0x00671048"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003693BC"
+      ]
+    },
+    {
+      "name": "TitleSelection_SaveMenuSelection",
+      "address": "0x003693C8",
+      "size": "0x14",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_003693C8",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671050": "0x00671050",
+        "retail_0067104C": "0x0067104C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003693C8"
+      ]
+    },
+    {
+      "name": "TitleSelection_GetMainSelection",
+      "address": "0x003693DC",
+      "size": "0xc",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_003693DC",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0067104C": "0x0067104C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003693DC"
+      ]
+    },
+    {
+      "name": "TitleSelection_GetSubSelection",
+      "address": "0x003693E8",
+      "size": "0xc",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_003693E8",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671050": "0x00671050"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003693E8"
+      ]
+    },
+    {
+      "name": "TitleSelection_003693F4",
+      "address": "0x003693F4",
+      "size": "0xc",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_003693F4",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671054": "0x00671054"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003693F4"
+      ]
+    },
+    {
+      "name": "TitleSelection_00369400",
+      "address": "0x00369400",
+      "size": "0xc",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_00369400",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671054": "0x00671054"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00369400"
+      ]
+    },
+    {
+      "name": "TitleSelection_0036940C",
+      "address": "0x0036940C",
+      "size": "0xc",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_0036940C",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671058": "0x00671058"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0036940C"
+      ]
+    },
+    {
+      "name": "TitleSelection_00369418",
+      "address": "0x00369418",
+      "size": "0xc",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_00369418",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671058": "0x00671058"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00369418"
+      ]
+    },
+    {
+      "name": "TitleSelection_SetMode0To2",
+      "address": "0x00369424",
+      "size": "0x20",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_00369424",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671060": "0x00671060"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00369424",
+        "-g"
+      ]
+    },
+    {
+      "name": "TitleSelection_GetMode",
+      "address": "0x00369444",
+      "size": "0xc",
+      "source": "src/game/scene/title/scene_title_base.c",
+      "symbol": "match_00369444",
+      "tu": "game/scene/title/scene_title_base",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00671060": "0x00671060"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00369444"
+      ]
+    },
+    {
+      "name": "CseNode_IsAnimationComplete",
+      "address": "0x0032BB54",
+      "size": "0x28",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BB54",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0032F0E8": "0x0032F0E8"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BB54"
+      ]
+    },
+    {
+      "name": "CseNode_IsAnimationTreeComplete",
+      "address": "0x0032BB7C",
+      "size": "0xc0",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BB7C",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_0032BB54": "0x0032BB54",
+        "retail_0032BB7C": "0x0032BB7C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BB7C",
+        "-g"
+      ]
+    },
+    {
+      "name": "CseNode_SetTreeFrame",
+      "address": "0x0032BC3C",
+      "size": "0x64",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BC3C",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0032BCA0": "0x0032BCA0",
+        "retail_0032BC3C": "0x0032BC3C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BC3C",
+        "-g"
+      ]
+    },
+    {
+      "name": "CseNode_SetLocalFrame",
+      "address": "0x0032BCA0",
+      "size": "0xb0",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BCA0",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_0032F194": "0x0032F194"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BCA0"
+      ]
+    },
+    {
+      "name": "CseNode_ResetMatrix",
+      "address": "0x0032BD50",
+      "size": "0x1c",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BD50",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_003D00EC": "0x003D00EC"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BD50"
+      ]
+    },
+    {
+      "name": "CseNode_SetScale",
+      "address": "0x0032BD6C",
+      "size": "0xc",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BD6C",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BD6C"
+      ]
+    },
+    {
+      "name": "CseNode_SetRotation",
+      "address": "0x0032BD78",
+      "size": "0x8",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BD78",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BD78"
+      ]
+    },
+    {
+      "name": "CseNode_SetPosition",
+      "address": "0x0032BD80",
+      "size": "0x1c",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BD80",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BD80"
+      ]
+    },
+    {
+      "name": "CseNode_GetColor",
+      "address": "0x0032BD9C",
+      "size": "0x30",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BD9C",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_003DDD88": "0x003DDD88"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BD9C"
+      ]
+    },
+    {
+      "name": "CseNode_SetTreeColor",
+      "address": "0x0032BDCC",
+      "size": "0xb0",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BDCC",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_0032BE7C": "0x0032BE7C",
+        "retail_0032BDCC": "0x0032BDCC"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BDCC"
+      ]
+    },
+    {
+      "name": "CseNode_SetLocalColor",
+      "address": "0x0032BE7C",
+      "size": "0x58",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BE7C",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_003DDDCC": "0x003DDDCC"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BE7C"
+      ]
+    },
+    {
+      "name": "CseNode_SetTreeColors",
+      "address": "0x0032BED4",
+      "size": "0xb0",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BED4",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_0032BF84": "0x0032BF84",
+        "retail_0032BED4": "0x0032BED4"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BED4"
+      ]
+    },
+    {
+      "name": "CseNode_SetLocalColors",
+      "address": "0x0032BF84",
+      "size": "0x60",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BF84",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_003DDDCC": "0x003DDDCC"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BF84"
+      ]
+    },
+    {
+      "name": "CseNode_IsHidden",
+      "address": "0x0032BFE4",
+      "size": "0x30",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032BFE4",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032BFE4",
+        "-g"
+      ]
+    },
+    {
+      "name": "CseNode_SetTreeHidden",
+      "address": "0x0032C014",
+      "size": "0xb0",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032C014",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_0032C014": "0x0032C014",
+        "retail_0032C0C4": "0x0032C0C4"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032C014"
+      ]
+    },
+    {
+      "name": "CseNode_SetLocalHidden",
+      "address": "0x0032C0C4",
+      "size": "0x2c",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032C0C4",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032C0C4"
+      ]
+    },
+    {
+      "name": "CseNode_GetAnimationId",
+      "address": "0x0032C4EC",
+      "size": "0x18",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032C4EC",
+      "tu": "engine/cse/cse_node",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032C4EC",
+        "-g"
+      ],
+      "notes": "Return through 0x0032C500; separate virtual no-op begins 0x0032C504, referenced at 0x00685DBC."
+    },
+    {
+      "name": "AudioEvents_PlayEvent",
+      "address": "0x00311F78",
+      "size": "0xb8",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00311F78",
+      "tu": "engine/audio/audio_events",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_003136D8": "0x003136D8",
+        "retail_0039FB94": "0x0039FB94",
+        "retail_00310FF8": "0x00310FF8",
+        "retail_003A03E8": "0x003A03E8"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00311F78",
+        "-g"
+      ]
+    },
+    {
+      "name": "AudioEvents_PlayGroupEvent",
+      "address": "0x00312030",
+      "size": "0xc8",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00312030",
+      "tu": "engine/audio/audio_events",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {
+        "retail_00313778": "0x00313778",
+        "retail_0039FB94": "0x0039FB94",
+        "retail_00310FF8": "0x00310FF8",
+        "retail_003A03E8": "0x003A03E8"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00312030",
+        "-g"
+      ]
+    },
+    {
+      "name": "AudioEvents_PlayByName",
+      "address": "0x003120F8",
+      "size": "0x34",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_003120F8",
+      "tu": "engine/audio/audio_events",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00311F78": "0x00311F78",
+        "retail_003E4710": "0x003E4710"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003120F8"
+      ]
+    },
+    {
+      "name": "AudioEvents_PlayGroupByName",
+      "address": "0x0031212C",
+      "size": "0x44",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_0031212C",
+      "tu": "engine/audio/audio_events",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00312030": "0x00312030",
+        "retail_003E4710": "0x003E4710"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0031212C"
+      ]
+    },
+    {
+      "name": "AudioEvents_ScheduleHandleParameter",
+      "address": "0x00312170",
+      "size": "0x44",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00312170",
+      "tu": "engine/audio/audio_events",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_003A098C": "0x003A098C"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00312170",
+        "-g"
+      ]
+    },
+    {
+      "name": "MenuSelector_Configure",
+      "address": "0x002E0A6C",
+      "size": "0x48",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E0A6C",
+      "tu": "engine/ui/menu_selector",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_00605CA4": "0x00605CA4"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E0A6C"
+      ]
+    },
+    {
+      "name": "MenuSelector_VirtualNoop",
+      "address": "0x002E0AB4",
+      "size": "0x8",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E0AB4",
+      "tu": "engine/ui/menu_selector",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E0AB4"
+      ]
+    },
+    {
+      "name": "MenuSelector_Update",
+      "address": "0x002E0ABC",
+      "size": "0x9c",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E0ABC",
+      "tu": "engine/ui/menu_selector",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_002E10C0": "0x002E10C0",
+        "retail_002E1534": "0x002E1534",
+        "retail_002E0DF8": "0x002E0DF8",
+        "retail_002E0FC0": "0x002E0FC0"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E0ABC",
+        "-g"
+      ]
+    },
+    {
+      "name": "MenuSelector_GetScrollOffset",
+      "address": "0x002E0B58",
+      "size": "0xb4",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E0B58",
+      "tu": "engine/ui/menu_selector",
+      "block01_matching_state": "NON_MATCHING",
+      "relocation_targets": {},
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E0B58",
+        "-g"
+      ]
+    },
+    {
+      "name": "MenuSelector_Reset",
+      "address": "0x002E0C0C",
+      "size": "0x24",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E0C0C",
+      "tu": "engine/ui/menu_selector",
+      "block01_matching_state": "MATCHING_EXACT",
+      "relocation_targets": {
+        "retail_002E1518": "0x002E1518"
+      },
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E0C0C"
+      ]
+    },
+    {
+      "name": "CseNode_VirtualNoop",
+      "address": "0x0032C504",
+      "size": "0x8",
+      "source": "src/engine/cse/cse_node.c",
+      "symbol": "match_0032C504",
+      "tu": "engine/cse/cse_node",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0032C504"
+      ],
+      "relocation_targets": {},
+      "notes": "Reconstructed C; count only fresh exact audit results.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "MenuSelector_SetSelection",
+      "address": "0x002E0C30",
+      "size": "0x1c8",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E0C30",
+      "tu": "engine/ui/menu_selector",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E0C30"
+      ],
+      "relocation_targets": {
+        "retail_002E1518": "0x002E1518",
+        "retail_002E12DC": "0x002E12DC",
+        "retail_003D194C": "0x003D194C"
+      },
+      "notes": "Reconstructed C; count only fresh exact audit results.",
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "MenuSelector_ReadRepeatMovement",
+      "address": "0x002E0DF8",
+      "size": "0x1c8",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E0DF8",
+      "tu": "engine/ui/menu_selector",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E0DF8"
+      ],
+      "relocation_targets": {
+        "retail_003C6764": "0x003C6764",
+        "retail_003C69E4": "0x003C69E4"
+      },
+      "notes": "Reconstructed C; count only fresh exact audit results.",
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "MenuSelector_ReadPressMovement",
+      "address": "0x002E0FC0",
+      "size": "0x100",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E0FC0",
+      "tu": "engine/ui/menu_selector",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E0FC0"
+      ],
+      "relocation_targets": {
+        "retail_003C6764": "0x003C6764",
+        "retail_003C69E4": "0x003C69E4"
+      },
+      "notes": "Reconstructed C; count only fresh exact audit results.",
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "AudioEvents_BeginHandleParameter",
+      "address": "0x003121B4",
+      "size": "0x64",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_003121B4",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003121B4"
+      ],
+      "relocation_targets": {
+        "retail_00312170": "0x00312170"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "AudioEvents_SetHandleParameter",
+      "address": "0x00312218",
+      "size": "0x20",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00312218",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00312218"
+      ],
+      "relocation_targets": {
+        "retail_003A0AA8": "0x003A0AA8"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "AudioEvents_SetCategoryParameter",
+      "address": "0x00312238",
+      "size": "0x1c",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00312238",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00312238"
+      ],
+      "relocation_targets": {
+        "retail_003A0B60": "0x003A0B60"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "AudioEvents_StopEvent",
+      "address": "0x00312254",
+      "size": "0x78",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00312254",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00312254"
+      ],
+      "relocation_targets": {
+        "retail_0039FFE8": "0x0039FFE8",
+        "retail_0039FFC8": "0x0039FFC8",
+        "retail_003136D8": "0x003136D8"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "AudioEvents_StopGroupEvent",
+      "address": "0x003122CC",
+      "size": "0x78",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_003122CC",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003122CC"
+      ],
+      "relocation_targets": {
+        "retail_0039FFE8": "0x0039FFE8",
+        "retail_0039FFC8": "0x0039FFC8",
+        "retail_00313778": "0x00313778"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "AudioEvents_StopByName",
+      "address": "0x00312344",
+      "size": "0x44",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00312344",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00312344"
+      ],
+      "relocation_targets": {
+        "retail_003E4710": "0x003E4710",
+        "retail_00312254": "0x00312254"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "AudioEvents_StopGroupByName",
+      "address": "0x00312388",
+      "size": "0x54",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00312388",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00312388"
+      ],
+      "relocation_targets": {
+        "retail_003E4710": "0x003E4710",
+        "retail_003122CC": "0x003122CC"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "AudioEvents_StopHandle",
+      "address": "0x003123DC",
+      "size": "0x44",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_003123DC",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003123DC"
+      ],
+      "relocation_targets": {
+        "retail_0039FDE4": "0x0039FDE4",
+        "retail_0039FE28": "0x0039FE28"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "AudioEvents_StopCategoryFrames",
+      "address": "0x00312420",
+      "size": "0x4c",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_00312420",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00312420"
+      ],
+      "relocation_targets": {
+        "retail_003A00B4": "0x003A00B4",
+        "retail_003A0094": "0x003A0094"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "AudioEvents_StopEventFrames",
+      "address": "0x0031246C",
+      "size": "0x80",
+      "source": "src/engine/audio/audio_events.c",
+      "symbol": "match_0031246C",
+      "tu": "engine/audio/audio_events",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0031246C"
+      ],
+      "relocation_targets": {
+        "retail_0031357C": "0x0031357C",
+        "retail_0039FEFC": "0x0039FEFC",
+        "retail_0039FF1C": "0x0039FF1C"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "MenuSelector_SetDisplayedPosition",
+      "address": "0x002E12DC",
+      "size": "0x12c",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E12DC",
+      "tu": "engine/ui/menu_selector",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E12DC"
+      ],
+      "relocation_targets": {
+        "retail_003D194C": "0x003D194C"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "MenuSelector_SetFirstVisible",
+      "address": "0x002E1408",
+      "size": "0x4c",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E1408",
+      "tu": "engine/ui/menu_selector",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E1408"
+      ],
+      "relocation_targets": {},
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "MenuSelector_WrapSelection",
+      "address": "0x002E1454",
+      "size": "0xc4",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E1454",
+      "tu": "engine/ui/menu_selector",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E1454"
+      ],
+      "relocation_targets": {
+        "retail_003D194C": "0x003D194C"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "NON_MATCHING"
+    },
+    {
+      "name": "MenuSelector_ResetMovement",
+      "address": "0x002E1518",
+      "size": "0x1c",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E1518",
+      "tu": "engine/ui/menu_selector",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E1518"
+      ],
+      "relocation_targets": {
+        "retail_00605CA4": "0x00605CA4"
+      },
+      "notes": "Function boundary checked against retail return/delay and following call-referenced entry.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneCommon_Destroy",
+      "address": "0x00389338",
+      "size": "0x34",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_00389338",
+      "tu": "game/scene/scene_common",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x00389338"
+      ],
+      "relocation_targets": {
+        "retail_003D34F4": "0x003D34F4",
+        "retail_00686AA0": "0x00686AA0"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneCommon_PrepareRenderState",
+      "address": "0x0038936C",
+      "size": "0xa8",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_0038936C",
+      "tu": "game/scene/scene_common",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x0038936C"
+      ],
+      "relocation_targets": {
+        "retail_004088B0": "0x004088B0",
+        "retail_00408F58": "0x00408F58",
+        "retail_003F8708": "0x003F8708",
+        "retail_0023FF88": "0x0023FF88",
+        "retail_003F86E0": "0x003F86E0",
+        "retail_003F800C": "0x003F800C",
+        "retail_003F86C4": "0x003F86C4",
+        "retail_003F81A8": "0x003F81A8",
+        "retail_003F812C": "0x003F812C",
+        "retail_003DDD88": "0x003DDD88",
+        "retail_006BB850": "0x0002E4D8"
+      },
+      "notes": "Raw PRX HI16/LO16 at 0x0038938C/0x00389390 have r_info 0x00010005/0x00010006. Referenced PT_LOAD[1] starts 0x0068D378; encoded addend 0x0002E4D8 resolves to runtime-relative 0x006BB850. Match raw on-disk instructions, not Ghidra relocated memory.",
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "SceneCommon_FormatNumberPair",
+      "address": "0x003899F4",
+      "size": "0xc0",
+      "source": "src/game/scene/scene_common.c",
+      "symbol": "match_003899F4",
+      "tu": "game/scene/scene_common",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x003899F4"
+      ],
+      "relocation_targets": {
+        "retail_00389884": "0x00389884",
+        "retail_005C2B0C": "0x005C2B0C"
+      },
+      "block01_matching_state": "MATCHING_EXACT"
+    },
+    {
+      "name": "MenuSelector_ApplyMovement",
+      "address": "0x002E10C0",
+      "size": "0x21C",
+      "source": "src/engine/ui/menu_selector.c",
+      "symbol": "match_002E10C0",
+      "tu": "engine/ui/menu_selector",
+      "snc_flags": [
+        "-td=.",
+        "-O2",
+        "-G0",
+        "-g",
+        "-Xsched=2",
+        "-DMATCH_FUNCTION=0x002E10C0"
+      ],
+      "relocation_targets": {
+        "retail_002E1454": "0x002E1454",
+        "retail_002E12DC": "0x002E12DC",
+        "retail_002E1408": "0x002E1408"
+      },
+      "notes": "Full 540-byte range ending 0x002E12DC, including return and delay slot; replaces earlier truncated analysis-only seed.",
       "block01_matching_state": "MATCHING_EXACT"
     }
   ]

@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
+"""Show reproducible progress; never count hand-maintained matching labels."""
 import json
-from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1]
-layout=json.loads((ROOT/"config/NPJH50333/elf_layout.json").read_text())
-funcs=json.loads((ROOT/"matching/functions.json").read_text())["functions"]
-exec_bytes=sum(s["size"] for s in layout["sections"] if s["type"]==1 and (s["flags"]&4) and s["size"])
-data_bytes=sum(s["size"] for s in layout["sections"] if (s["flags"]&2) and not(s["flags"]&4)
-               and s["size"] and s["type"] in (1,8))
-exact=[f for f in funcs if f.get("block01_matching_state")=="MATCHING_EXACT"]
-matched=sum(int(f["size"],0) for f in exact)
-tracked=sum(int(f["size"],0) for f in funcs)
-print("Kurohyou NPJH50333 decomp progress")
-print("="*42)
-print(f"Block 01 exact C/C++ : {len(exact)}/{len(funcs)}")
-print(f"Audited code bytes   : {matched}/{tracked} exact")
-print(f"Whole executable     : {matched}/{exec_bytes} ({matched/exec_bytes*100:.6f}%)")
-print(f"Data/rodata/bss      : 0/{data_bytes} (0.000000%)")
-print("Only byte-exact reconstructed C/C++ counts as matched code.")
+from audit_evidence import ROOT, load_verified_audit
+
+
+def main():
+    audit, manifest = load_verified_audit()
+    total = audit['total_executable_bytes']
+    matched = audit['matched_code_bytes']
+    print(f"Exact C/C++ functions: {audit['matching_functions']}/{audit['candidate_functions']}")
+    print(f"Whole executable: {matched}/{total} bytes ({100 * matched / total:.6f}%)")
+    print(f"Required for 1%: {(total + 99) // 100} bytes; remaining: {(total + 99) // 100 - matched}")
+    exact = {int(f['address'], 0) for f in audit['functions'] if f['exact']}
+    units = json.loads((ROOT / 'config/NPJH50333/translation_units.json').read_text())['units']
+    for unit in units:
+        done = [f for f in unit['functions'] if int(f['address'], 0) in exact]
+        size = sum(f['size'] for f in unit['functions'])
+        count = sum(f['size'] for f in done)
+        print(f"{unit['class_name']}: {len(done)}/{len(unit['functions'])} inventoried functions; {count}/{size} inventoried bytes ({100*count/size:.2f}%)")
+    print('Data matching: not certified. TU boundaries provisional; verification is per function.')
+
+
+if __name__ == '__main__':
+    main()

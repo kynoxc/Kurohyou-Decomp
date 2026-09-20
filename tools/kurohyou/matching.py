@@ -133,57 +133,75 @@ def patch_text_relocations(data: bytes, relocation_targets: dict[str, int] | Non
     without requiring a full PSP link.  Targets are declared explicitly in the
     function manifest, so no guessed symbol/address mapping can enter the audit.
     """
-    sections=elf32le_sections(data)
-    execs=[s for s in sections if s.type==SHT_PROGBITS and (s.flags & SHF_EXECINSTR) and s.size]
-    if not execs:
-        raise ValueError("object has no executable PROGBITS section")
-    text=max(execs,key=lambda x:x.size)
-    blob=bytearray(data[text.offset:text.offset+text.size])
-    targets=relocation_targets or {}
-    records=[]
+    sections = elf32le_sections(data)
+    execs = [s for s in sections if s.type == SHT_PROGBITS and s.flags & SHF_EXECINSTR and s.size]
+    if len(execs) != 1:
+        raise ValueError("function audit requires exactly one nonempty executable section")
+    text = execs[0]
+    blob = bytearray(data[text.offset:text.offset + text.size])
+    targets = relocation_targets or {}
+    records = []
     for relsec in sections:
-        if relsec.type != SHT_REL or relsec.info != text.index or relsec.entsize not in (0,8):
+        if relsec.type != SHT_REL or relsec.info != text.index:
             continue
-        syms=elf_symbols(data,sections,relsec.link)
-        step=relsec.entsize or 8
-        for p in range(relsec.offset, relsec.offset+relsec.size, step):
-            if p+8>len(data): break
-            offset,info=struct.unpack_from("<II",data,p)
-            sym_index=info>>8; rtype=info & 0xff
-            sym=syms[sym_index] if sym_index < len(syms) else {"name":"","value":0,"shndx":0}
-            name=sym.get("name","")
-            rec={"offset":offset,"type":rtype,"symbol":name,"resolved":False}
-            target = None
-            target_source = None
-            if name in targets:
-                target=parse_hex(targets[name])
-                target_source="manifest"
-            elif sym.get("shndx") == text.index:
-                # Relocatable objects can leave local J/JAL relocations against the
-                # .text section symbol.  Resolve those as if this one-function TU were
-                # linked at the exact retail function address being compared.
-                target=(text_base + int(sym.get("value",0))) & 0xffffffff
-                target_source="local-text"
-            if target is None:
-                records.append(rec); continue
-            if offset+4>len(blob):
-                rec["error"]="relocation offset outside .text";records.append(rec);continue
-            word=struct.unpack_from("<I",blob,offset)[0]
-            if rtype==R_MIPS_26:
-                word=(word & 0xfc000000) | ((target>>2)&0x03ffffff)
-            elif rtype==R_MIPS_32:
-                word=(word + target) & 0xffffffff
-            elif rtype==R_MIPS_HI16:
-                imm=((target+0x8000)>>16)&0xffff
-                word=(word & 0xffff0000)|imm
-            elif rtype==R_MIPS_LO16:
-                word=(word & 0xffff0000)|(target&0xffff)
-            else:
-                rec["error"]="unsupported relocation type";records.append(rec);continue
-            struct.pack_into("<I",blob,offset,word)
-            rec.update(resolved=True,target=f"0x{target:08X}",target_source=target_source)
+        if relsec.entsize not in (0, 8) or relsec.size % 8:
+            raise ValueError("invalid MIPS REL table")
+        syms = elf_symbols(data, sections, relsec.link)
+        pending = {}
+        for p in range(relsec.offset, relsec.offset + relsec.size, 8):
+            offset, info = struct.unpack_from("<II", data, p)
+            sym_index, rtype = info >> 8, info & 0xff
+            if sym_index >= len(syms):
+                raise ValueError("invalid relocation symbol index")
+            sym = syms[sym_index]
+            name = sym["name"]
+            rec = {"offset": offset, "type": rtype, "symbol": name, "resolved": False}
             records.append(rec)
-    return bytes(blob),records
+            if offset % 4 or offset + 4 > len(blob):
+                rec["error"] = "unaligned relocation or offset outside .text"
+                continue
+            if name in targets:
+                target, source = parse_hex(targets[name]), "manifest"
+            elif sym["shndx"] == text.index:
+                target, source = text_base + sym["value"], "local-text"
+            else:
+                continue
+            word = struct.unpack_from("<I", data, text.offset + offset)[0]
+            rec.update(target=f"0x{target:08X}", target_source=source)
+            if rtype == R_MIPS_HI16:
+                # REL stores the addend in the instruction pair, not in a separate field.
+                # Several HI16 records may share the next LO16 for the same symbol.
+                pending.setdefault(sym_index, []).append((rec, word))
+                continue
+            if rtype == R_MIPS_LO16:
+                low = (word & 0xffff) - (0x10000 if word & 0x8000 else 0)
+                addend = low
+                for high_rec, high_word in pending.pop(sym_index, []):
+                    full_addend = ((high_word & 0xffff) << 16) + low
+                    value = (target + full_addend) & 0xffffffff
+                    patched = (high_word & 0xffff0000) | (((value + 0x8000) >> 16) & 0xffff)
+                    struct.pack_into("<I", blob, high_rec["offset"], patched)
+                    high_rec.update(resolved=True, addend=full_addend)
+                patched = (word & 0xffff0000) | ((target + low) & 0xffff)
+            elif rtype == R_MIPS_26:
+                addend = (word & 0x03ffffff) << 2
+                value = target + addend
+                if value & 3 or (value & 0xf0000000) != ((text_base + offset + 4) & 0xf0000000):
+                    rec["error"] = "J/JAL destination outside its address region"
+                    continue
+                patched = (word & 0xfc000000) | ((value >> 2) & 0x03ffffff)
+            elif rtype == R_MIPS_32:
+                addend = word
+                patched = (target + word) & 0xffffffff
+            else:
+                rec["error"] = "unsupported relocation type"
+                continue
+            struct.pack_into("<I", blob, offset, patched)
+            rec.update(resolved=True, addend=addend)
+        for pairs in pending.values():
+            for rec, _ in pairs:
+                rec["error"] = "HI16 has no following LO16 for its symbol"
+    return bytes(blob), records
 
 
 def words(blob: bytes) -> list[bytes]:
